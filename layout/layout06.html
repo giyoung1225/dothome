@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout06</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%; 
+            height: 1600px;
+            font-size: 72px;
+            font-family: 'S-CoreDream-8Heavy';
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        #header_wrap {
+            width: 100%; 
+            height: 150px; 
+            background-color: #f8bbd0;
+        }
+        #banner_wrap {
+            width: 100%; 
+            height: 400px; 
+            background-color: #f06292;
+        }
+        #contents_wrap {
+            width: 100%; 
+            height: 900px; 
+            background-color: #e91e63;
+        }
+        #footer_wrap {
+            width: 100%; 
+            height: 150px; 
+            background-color: #f50057;
+        }
+
+        .header {
+            width: 1200px; 
+            height: 150px; 
+            line-height: 150px; 
+            margin: 0 auto; 
+            background-color: #f48fb1;
+        }
+        .banner {
+            width: 1200px; 
+            height: 400px; 
+            line-height: 400px;
+            margin: 0 auto; 
+            background-color: #ec407a;
+        }
+        .content1 {
+            width: 1200px; 
+            height: 300px; 
+            line-height: 300px; 
+            margin: 0 auto; 
+            background-color: #d81b60;
+        }
+        .content2 {
+            width: 1200px; 
+            height: 300px; 
+            line-height: 300px; 
+            margin: 0 auto; 
+            background-color: #c2185b;
+        }
+        .content3 {
+            width: 1200px; 
+            height: 300px; 
+            line-height: 300px; 
+            margin: 0 auto; 
+            background-color: #ad1457;
+        }
+        .footer {
+            width: 1200px; 
+            height: 150px; 
+            line-height: 150px; 
+            margin: 0 auto; 
+            background-color: #c51162;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <div id="banner_wrap">
+            <div class="banner">banner</div>
+        </div>
+        <div id="contents_wrap">
+            <div class="content1">content1</div>
+            <div class="content2">content2</div>
+            <div class="content3">content3</div>
+        </div>
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>
