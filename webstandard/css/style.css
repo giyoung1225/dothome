@@ -162,4 +162,19 @@
     padding-left: 70px;
     border-bottom: 1px solid #d0d0d0;
     padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+/* 게시판 */
+.notice {position: relative;}
+.notice h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
+.notice ul li {
+    padding-left: 8px;
+    background: url(../img/dot.gif) no-repeat 0 8px;
+    overflow: hidden; white-space: nowrap; text-overflow: ellipsis;} /* 한줄효과 */
+.notice ul li a {font-size: 12px;}
+.notice a.more {
+    position: absolute; right: 0; top: 0;
+    width: 17px; height: 17px; display: block;
+    background: url(../img/icon.png) -150px -90px;
 }
