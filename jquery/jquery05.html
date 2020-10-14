@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery01</title>
+</head>
+<body>
+    
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+        function fun1(){
+            let result, a = 100, b = 200, c = 300;
+            result = a < b ? b++ : --c;
+            document.write(result);
+        }
+        fun1()
+
+        function func2(){
+            let hap, j, k, l;
+            j = k = l = 0;
+            hap = ++j + k++ + ++l;
+            document.write(hap);
+        }
+        func2();
+
+        function func4(){
+            let i = 10, j = 10, k = 30;
+            i /= j;
+            j -= i;
+            k %= j;
+            document.write(i);
+            document.write(j);
+            document.write(k);
+        }
+        func4();
+
+        //1
+        //9
+        //3
+
+        function func5(){
+            for(i = 1; i <= 7; i++){
+                for(j = 1; j <= i; j++){
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+        }
+        func5();
+    </script>
+</body>
+</html>
