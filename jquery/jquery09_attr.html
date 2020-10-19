@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery01</title>
+</head>
+<body>
+
+    <div class="img">
+        <img src="img/img03.jpg" alt="이미지1" width="300">
+        <p class="desc"></p>
+        <button class="btn1">200</button>
+        <button class="btn2">400</button>
+        <button class="btn3">600</button>
+    </div>
+    
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+        //이미지를 클릭하면 이미지를 사라지게
+        $("img").click(function(){
+            // $("img").css("display", "none");
+            //$(this).css("display", "none");
+            let txt = $(this).attr("src");
+
+            $(".desc").text(txt);
+        });
+
+        $(".desc").css({"backgroundColor" : "red", "color" : "white"});
+
+        
+        //첫번째 버튼을 클릭하면 이미지 크기를 200
+        $(".btn1").click(function(){
+            $("img").attr("width", "200");
+        });
+
+        //두번째 버튼을 클릭하면 이미지 크기를 400
+        $(".btn2").click(function(){
+            $("img").attr("width", "400")
+        });
+
+        //세번째 버튼을 클릭하면 이미지 크기를 600
+        $(".btn3").click(function(){
+            $("img").attr("width", "600")
+        });
+
+
+
+
+        //desc를 선택해서 패딩을 20px;
+        //$(".img > .desc").css("padding", "20px");
+        //$("p:eq(0)").css("padding", "20px");
+        //$("p:lt(1)").css("padding", "20px");
+        //$("p:first").css("padding", "20px");
+        //$("p:last").css("padding", "20px");
+        //$("p:even").css("padding", "20px");
+        //$("p:contains(1)").css("padding", "20px");
+        //$("p:last-child").css("padding", "20px");
+        //$("p:nth-child(2)").css("padding", "20px");
+        //$("p:nth-child(even)").css("padding", "20px");
+        //$("p:nth-child(2n)").css("padding", "20px");
+        //$("p:nth-child(1n+1)").css("padding", "20px");
+        //$("div p[class]").css("padding", "20px");
+        //$("p[class='desc']").css("padding", "20px");
+        //$("p[class^='desc']").css("padding", "20px");
+        //$("p[class*='desc']").css("padding", "20px");
+        //$("p[class$='desc']").css("padding", "20px");
+        //$("img + p").css("padding", "20px");
+        //$("img ~ p").css("padding", "20px");
+        //$("img ~ p").css("padding", "20px");
+    </script>
+</body>
+</html>
