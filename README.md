@@ -1,7 +1,7 @@
 # dothome
 학원에서 쓰는 페이지
 
-#github사이트
+#HONG사이트
 <a href="https://giyoung1225.github.io/dothome/">바로가기</a>
          
 #웹표준 사이트 만들기
