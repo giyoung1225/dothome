@@ -23,6 +23,10 @@
     font-size: 30px;
     letter-spacing: 2px;
     font-weight: 900;
+    transition: box-shadow 1s ease-in-out;
+}
+.header .header_tit h1:hover {
+    box-shadow: inset 0 0 0 2rem #2782AF;
 }
 .header .header_tit a {
     background: #4a9abf; 
@@ -31,6 +35,12 @@
     font-size: 16px; 
     padding: 10px 20px; 
     margin: -7px;
+    transition: all 1s;
+}
+.header .header_tit a:hover {
+    box-shadow: 0 0.2rem 0.3rem 0.2rem #2883AF;
+	transform: translatey(0.3rem);
+	color: #fff;	
 }
 .header .header_icon {}
 
