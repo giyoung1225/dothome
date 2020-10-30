@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI03</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {background: #f8bbd0;}
+
+        .container {width: 90%; margin: 0 auto;}
+
+        header {width: 100%; height: 100px; background: #f48fb1;}
+        aside {width: 30%; height: 900px; background: #f06292; float: left;}
+        .article1 {width: 70%; height: 300px; background: #ec407a; float: right;}
+        .article2 {width: 70%; height: 300px; background: #e91e63; float: right;}
+        .article3 {width: 70%; height: 300px; background: #ad1457; float: right;}
+        footer {width: 100%; height: 100px; background: #c2185b; clear: both;}
+
+        /* 화면너비 0~1280 */
+        @media (max-width: 1280px){
+            .container {width: 100%;}
+            .article1 {height: 450px;}
+            .article2 {height: 450px;}
+            .article3 {width: 100%;}
+        }
+        /* 화면너비 0~900 */
+        @media (max-width: 900px){
+            aside {width: 100%; height: 300px;}
+            .article1 {width: 50%;}
+            .article2 {width: 50%;}
+        }
+        /* 화면너비 0~480 */
+        @media (max-width: 480px){
+            .article1 {width: 100%; height: 300px;}
+            .article2 {width: 100%; height: 300px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <!-- //header -->
+            <aside></aside>
+            <!-- //aside -->
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+            <!-- //article -->
+            <footer></footer>
+            <!-- //footer -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

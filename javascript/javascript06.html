@@ -11,10 +11,16 @@
         // }
         // func1();
 
+        // function func1(){
+        //     document.write("함수1이 실행되었습니다.<br>");
+        // }
+        // func1();
+
         function func1(){
-            document.write("함수1이 실행되었습니다.<br>");
+            document.write("함수 실행");
         }
         func1();
+        
 
         // //함수2이 실행되었습니다. (익명 함수)
         // const func2 = function(){
@@ -24,6 +30,11 @@
 
         const func2 = function(){
             document.write("함수2가 실행되었습니다.<br>");
+        }
+        func2();
+
+        const func2 = function(){
+            document.write("함수2 실행");
         }
         func2();
 
@@ -38,6 +49,11 @@
         }
         func3("함수3");
 
+        const func3 = function(name){
+            document.write(name + "실행");
+        }
+        func3("실행");
+
         // //함수4이 실행되었습니다. (리턴값 함수)
         // function func4(){
         //     const str = "함수4이 실행되었습니다.<br>"
@@ -45,11 +61,25 @@
         // }
         // document.write(func4());
 
+        // function func4(){
+        //     const str = "함수4가 실행되었습니다.<br>"
+        //     return str;
+        // }
+        // document.write(func4());
+
+        // function func4(){
+        //     const str = "함수4가 실행되었습니다.<br>"
+        //     return str;
+        // }
+        // document.write(func4());
+
         function func4(){
-            const str = "함수4가 실행되었습니다.<br>"
+            const str = "함수 실행"
             return str;
         }
         document.write(func4());
+
+
 
         // //객체 + 메서드
         // const info = {
@@ -61,15 +91,32 @@
         // }
         // info.study();
 
+        // const info = {
+        //     name : "함수5",
+        //     active : "실행",
+        //     study : function(){
+        //         document.write(this.name + "가 " + this.active + "되었습니다.<br>");
+        //     }
+        // }
+        // info.study();
+        
+        // const info = {
+        //     name : "함수5",
+        //     active : "실행",
+        //     study : function(){
+        //         document.write(this.name + "가 " + this. active + "되었습니다.<br>");
+        //     }
+        // }
+        // info.study();
+
         const info = {
-            name : "함수5",
+            name : "함수",
             active : "실행",
             study : function(){
-                document.write(this.name + "가 " + this.active + "되었습니다.<br>");
+                document.write(this.name + this.active);
             }
         }
         info.study();
-        
 
         // //객체 생성자
         // function Info1(name, active){
@@ -82,16 +129,35 @@
         // const result = new Info1("함수6", "실행");
         // result.study();
 
+        // function Info1(name, active){
+        //     this.name = name;
+        //     this.active = active;
+        //     this.study = function(){
+        //         document.write(this.name + "이 " + this.active + "되었습니다.<br>");
+        //     }
+        // }
+        // const result = new Info1("함수6", "실행");
+        // result.study();
+
+        // function Info1(name, active){
+        //     this.name = name;
+        //     this.active = active;
+        //     this.stdy = function(){
+        //         document.write(this.name + "이 " + this.active + "되었습니다.<br>");
+        //     }
+        // }
+        // const result = new Info1("함수", "실행");
+        // result.study();
+
         function Info1(name, active){
             this.name = name;
             this.active = active;
             this.study = function(){
-                document.write(this.name + "이 " + this.active + "되었습니다.<br>");
+                document.write(this.name + this.active);
             }
         }
-        const result = new Info1("함수6", "실행");
+        const result = new Info1("함수", "실행");
         result.study();
-
 
         // //프로토타입 메서드
         // function info2(name, active){
@@ -114,7 +180,22 @@
         const result2 = new info2("함수7", "실행");
         result2.study();
 
+        // function info2(name, active){
+        //     this.name = name;
+        //     this.active = active;
+        // }
+        // info2.prototype.study = new info2("함수", "실행");
+        // result2.study();
 
+        function info2(name, active){
+            this.name = name,
+            this.active = active;
+        }
+        info2.prototype.study = function(){
+            document.write(this.name + this.active);
+        }
+        const result2 = new info2("함수", "실행");
+        result2.study();
 
         // //클래스
         // class Info3 {
@@ -129,18 +210,41 @@
         // const result3 = new Info3("함수8", "실행");
         // result3.study();
 
+        // class Info3 {
+        //     constructor(name, active){
+        //         this.name = name;
+        //         this.active = active;
+        //     }
+        //     study(){
+        //         document.write(this.name + "이 " + this.active + "되었습니다.<br>");
+        //     }
+        // }
+        // const result3 = new Info3("함수8", "실행");
+        // result3.study();
+
+        // class Info3 {
+        //     constructor(name, active){
+        //         this.name = name;
+        //         this.active = active;
+        //     }
+        //     study(){
+        //         document.write(this.name + "이 " + this.active + "되었습니다.");
+        //     }
+        // }
+        // const result3 = new Info3("함수", "실행");
+        // result.study();
+
         class Info3 {
-            constructor(name, active){
-                this.name = name;
-                this.active = active;
+            constructo(name, active){
+                this.name = name,
+                this.active = active
             }
             study(){
-                document.write(this.name + "이 " + this.active + "되었습니다.<br>");
+                document.write(this.name + this.active);
             }
         }
-        const result3 = new Info3("함수8", "실행");
-        result3.study();
-
+        const resul3 = new Info3("함수", "실행");
+        result.study();
 
         // //클래스 상속
         // class Box1 {
