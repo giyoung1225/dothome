@@ -1,6 +1,7 @@
 /* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
 #nav {background-color: #f6fdff;}
+#cont_tit {background-color: #DCEFF7;}
 
 /* 컨테이너 */
 .container {width: 1200px; margin: 0 auto; /* background: rgba(0,0,0,0.3); */}
@@ -146,6 +147,31 @@
 .nav > div li:hover a::after {
     width: 100%;
 }
+
+.tit {position: relative;}
+.tit h2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 5px 0; 
+    color: #2c94c4;
+    font-family: "Nanum Brush Script";
+    letter-spacing: 2px; 
+}
+.tit .btn {
+    width: 60px; height: 60px;
+    text-align: center;
+    line-height: 70px;
+    position: absolute; right: 0; top: 5px;
+    background-color: #2A91C1;
+    border-radius: 50%;
+    color: #fff;
+}
+.tit .btn:hover {
+    box-shadow: 
+        0 0 0 3px rgba(75, 154, 191, 0.9) inset,
+        0 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+
 
 
 /* 미디어쿼리 */
