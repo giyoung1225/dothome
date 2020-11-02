@@ -14,7 +14,6 @@
  #skip a:focus, #skip a:active {top: 0px;}
 
 /* 레이아웃 */
-#wrap {}
 #header {
     height: 325px; 
     /* background-image: url(../img/header_bg.jpg); 
@@ -23,7 +22,6 @@
     /* 속기형 작성법 */
     background: url(../img/header_bg.jpg) repeat-x center top;
 }
-#contents {}
 #footer {border-top: 1px solid #eee;}
 
 /* 컨텐츠 레이아웃 */
@@ -36,7 +34,6 @@
 .container {width: 990px; margin: 0 auto; height: inherit; /* background-color: rgba(255, 255, 255, 0.3); */}
 
 /* header */
-.header {}
 .header .header_menu {text-align: right;}
 .header .header_menu a {color: #fff; padding: 10px 0 10px 10px; display: inline-block;}
 .header .header_menu a:hover {color: #666;}
@@ -366,7 +363,6 @@
 .gallery .gallery_img img {width: 100%;}
 
 /* 팝업 */
-.popup {}
 .popup h4 {font-size: 14px; color: #0093bd; font-weight: bold; padding-bottom: 3px;}
 .popup ul {overflow: hidden;}
 .popup li {width: 93px; float: left; margin-right: 5px;}
