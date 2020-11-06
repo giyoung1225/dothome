@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <style>
+
+        ul,li {list-style: none;}
+        a {text-decoration: none;}
+
+
+        * {margin: 0; padding: 0;}
+
+        #wrap {font-family: 'NanumSquare', sans-serif !important;}
+        #header {height: 90px; background: #111; position: fixed; width: 100%; z-index: 1000;}
+        #banner {
+            height: 750px; background: #222; 
+            background: url(../photoshop/img/main_lamp.jpg);
+            background-size: cover;
+        }
+        #contents {}
+        #cont1 {height: 200px; background: #333;}
+        #cont2 {height: 200px; background: #444;}
+        #cont3 {height: 200px; background: #555;}
+        #cont4 {height: 200px; background: #666;}
+        #cont5 {height: 200px; background: #777;}
+        #cont6 {height: 200px; background: #888;}
+        #footer {height: 200px; background: #999;}
+
+
+        .container {width: 1200px; height: inherit; margin: 0 auto;}
+        .header {position: relative; text-align: center;}
+        .logo {
+            position: absolute; left: 3%; top: 27px;
+            background: url(../photoshop/img/sp_svg_icon.png);
+            width: 150px; height: 30px;
+        }
+        .menu {}
+        .menu li {display: inline-block; padding: 30px 30px;}
+        .menu li a {color: #a8a8a8; font-size: 16px; font-weight: bold;}
+        .quick {position: absolute; right: 3%; top: 30px;}
+        .quick li {display: inline;  border: 1px solid #a8a8a8; padding: 5px 20px; border-radius: 5px;}
+        .quick a {color: #a8a8a8; font-size: 11px; font-weight: bold;}
+
+        .banner {
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            position: relative;
+            color: #fff;
+        }
+        .banner h2 {text-align: center; padding-bottom: 30px; font-size: 40px;}
+        .banner a {position: absolute; left: 550px; color: #fff; border: 2px solid #fff; border-radius: 30px; padding: 10px 20px;}
+        .banner a:hover {background: lightgreen; border: lightgreen;}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo"><a href="#"></a></h1>
+                    <ul class="menu">
+                        <li><a href="#">기술 · 솔루션</a></li>
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">플랫폼</a></li>
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">리서치</a></li>
+                    </ul>
+                    <ul class="quick">
+                        <li><a href="#">Biz Start</a></li>
+                        <li><a href="#">비즈니스 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>클로바 램프로 시작하는<br> 책상앞이 좋은 아이 프로젝트</h2>
+                    <a href="#">자세히보기</a>
+                </div>
+            </div>
+        </section>
+        <section id="contents">
+            <section id="cont1">
+                <div class="container"></div>
+            </section>
+            <section id="cont2">
+                <div class="container"></div>
+            </section>
+            <section id="cont3">
+                <div class="container"></div>
+            </section>
+            <section id="cont4">
+                <div class="container"></div>
+            </section>
+            <section id="cont5">
+                <div class="container"></div>
+            </section>
+            <section id="cont6">
+                <div class="container"></div>
+            </section>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
