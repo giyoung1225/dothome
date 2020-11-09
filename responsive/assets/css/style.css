@@ -9,7 +9,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 }
 #cont_left {float: left; width: 250px;}
 #cont_center {
-    min-height: 1200px;
+    min-height: 1300px;
     overflow: hidden; margin-right: 250px;
     border-right: 1px solid #dbdbdb;
     border-left: 1px solid #dbdbdb;
@@ -236,7 +236,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .notice1 li::before {
     content: '';
     width: 3px; height: 3px;
-    background: #25a2d0;
+    background: #449ce2;
     border-radius: 50%;
     position: absolute; left: 0; top: 9px;
 }
@@ -258,7 +258,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .notice2 li::before {
     content: '';
     width: 3px; height: 3px;
-    background: #25a2d0;
+    background: #449ce2;
     border-radius: 50%;
     position: absolute; left: 0; top: 9px;
 }
