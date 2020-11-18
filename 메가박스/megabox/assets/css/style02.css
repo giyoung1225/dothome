@@ -10,7 +10,6 @@
 .row {padding: 0 24px;}
 
 /* 헤더 영역 */
-.header {}
 .header h1 {float: left;}
 .header h1 em {padding: 15px 8px 5px 0; display: inline-block;}
 .header h1 em img {width: 155px;}
