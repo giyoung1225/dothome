@@ -112,6 +112,18 @@
                                     <td>gsap.from()</td>
                                     <td>일반적인 유형의 애니메이션의 방향을 반대로 정의합니다.</td>
                                 </tr>
+                                <tr>
+                                    <td>gsap.fromTo()</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>gsap.set()</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                <td>gsap.timeline()</td>
+                                    <td></td>
+                                </tr>
                                 
                             </tbody>
                         </table>
@@ -267,28 +279,13 @@ $(".btn2-3").click(function(){
 
                 <!-- Intro5 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro5" class="page-header">
-                        Animation05 - 무한 애니메이션
-                        <button type="button" class="btn btn-warning">start</button>
-                    </h2>
-                    <div class="sample">
-                        <h3><span></span><em class="sr-only">animation</em></h3>
-                        <div class="timing bg5">
-                            <div class="animation08"><span>08</span></div>
-                        </div>
-                    </div>
-<pre class="line-numbers language-js"><code>$("#intro5 > button").click(function(){
-    loop();
-});
-
-function loop(){
-    $(".animation08")
-        .animate({left: leftWidth},"fast")
-        .animate({top: leftHeight},"fast")
-        .animate({left: "0%"},"fast")
-        .animate({top: "0%"},"fast", loop);
-}
-</code></pre>
+                    <h2 id="intro5" class="page-header">GSAPAnimation</h2>
+                    <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="result" data-user="giyoung1225" data-slug-hash="eYzaNGL" style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GSAP Animation Sample01">
+                        <span>See the Pen <a href="https://codepen.io/giyoung1225/pen/eYzaNGL">
+                        GSAP Animation Sample01</a> by giyoung1225 (<a href="https://codepen.io/giyoung1225">@giyoung1225</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                 </div>
                 <!-- //Intro5 -->
 
