@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clova2</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <style>
+        * {margin: 0; padding: 0;}
+        ul, li {list-style: none;}
+        a {text-decoration: none;}
+        em {font-style: normal;}
+
+
+        #wrap {}
+        #header {height: 86px; background-color: #ffffff;}
+        #banner {height: 670px; background: url(/test/img/bg_cst.png); background-size: cover; position: relative;}
+        #footer {height: 132px; background-color: #191919;}
+        #cont1 {height: 1000px; background-color: #fff;}
+        #cont2 {height: 1000px; background-color: #fff;}
+        #cont3 {height: 1000px; background-color: #fff;}
+
+        .container {margin: 0 auto; width: 1200px; height: inherit; background: rgba(255,255,255,0);}
+
+
+        .header {position: relative; text-align: center;}
+        .logo {
+            background: url(../test/img/sp_svg_icon.png); 
+            width: 150px; height: 60px;
+            position: absolute; left: 20%; top: -2px;
+        }
+        .menu ul {margin-left: 24%;}
+        .menu li {display: inline-block; padding: 30px;}
+        .menu li a {color: rgba(0,0,0,0.6); font-size: 16px; font-weight: bold;}
+        .quick {position: absolute; right: 20%; top: 30px;}
+        .quick li {
+            display: inline; border: 1px solid rgba(0,0,0,0.4); 
+            border-radius: 5px; padding: 5px 10px;
+            margin-left: 5px;
+        }
+        .quick li a {color: rgba(0,0,0,0.4); font-size: 12px;}
+
+
+        .banner {padding: 15% 0 0 15%;}
+        .banner h2 {font-size: 46px; color: #fff; font-weight: 600;}
+        .banner p {margin: 17px 0 90px 0; text-align: left; font-size: 18px; color: #fff; line-height: 32px; font-weight: 300;}
+        .banner a {border: 1px solid #fff; padding: 15px 40px; border-radius: 4px; color: #fff; font-weight: 400;}
+
+        .cont1 {padding: 9%; text-align: center;}
+        .cont1 h2 {font-size: 42px; font-weight: 400;}
+        .cont1 h2 span {color: #05d686; margin-bottom: 25px; display: inline-block;}
+        .cont1 p {font-size: 20px; line-height: 34px; margin-bottom: 70px;}
+        .cont1 a {
+            border: 1px solid #05d686; border-radius: 4px; padding: 15px 50px; 
+            color: #fff; background: #05d686; font-size: 20px; font-weight: 400; margin-top: 40px;
+            display: inline-block;
+        }
+
+        .cont2 {padding: 10%;}
+        .cont2 h2 {text-align: center; font-size: 42px; font-weight: 400;}
+        .cont2 h2 span {color: #05d686; margin-bottom: 25px; display: inline-block;}
+        .cont2 p {text-align: center; margin-bottom: 70px;}
+        .cont2 div {}
+        .cont2 div ul {overflow: hidden;}
+        .cont2 div li {float: left; width: 27%; margin: 3%; font-size: 20px; line-height: 32px; padding-top: 9px;}
+        .cont2 .speak::before {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 266px; height: 170px; background-position: 0px 0px;
+            display: inline-block; margin-bottom: 30px;
+            }
+        .work::before {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 266px; height: 170px; background-position: -280px 0px;
+            display: inline-block; margin-bottom: 30px;
+        }
+        .service::before {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 266px; height: 170px; background-position: 0px -186px;
+            display: inline-block; margin-bottom: 30px;
+        }
+        .bulider em {
+            font-size: 24px;
+            font-weight: 700;
+            display: block;
+            text-align: center;
+        }
+        .bulider p {
+            font-size: 18px;
+            margin-top: 9px;
+            line-height: 32px;
+            color: #767676;
+        }
+        .speak {position: relative;}
+        .work {position: relative;}
+        .service {position: relative;}
+        .cont2 .speak::after {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 20px; height: 30px; background-position: -986px -267px;
+            display: inline-block; position: absolute; top: 90px; left: 280px;
+        }
+        .work::after {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 20px; height: 30px; background-position: -986px -267px;
+            display: inline-block; position: absolute; top: 90px; left: 280px;
+        }
+
+        .cont3 {text-align: center;}
+        .cont3 p {font-size: 20px; line-height: 34px; margin-top: 27px;}
+        .cont3 ul {overflow: hidden;}
+        .cont3 li {float: left; width: 33.3333%;}
+        .home::before {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 144px; height: 144px; background-position: 0px -422px;
+            display: inline-block; margin-top: 60px;
+        }
+        .center::before {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 144px; height: 144px; background-position: -148px -422px;
+            display: inline-block; margin-top: 60px;
+        }
+        .animal::before {
+            content: ''; background: url(/test/img/sp_platform.png) no-repeat; 
+            width: 144px; height: 144px; background-position: -270px -182px;
+            display: inline-block; margin-top: 60px;
+        }
+        .cont3 li em {display: block; font-size: 26px; font-weight: 300; margin-top: 27px;}
+        .cont3 li span {font-size: 20px; display: block; color: rgba(118,118,118,.9); font-weight: 700; line-height: 34px; margin-top: 15px;}
+        .cont3 li p {font-size: 20px; color: #767676;}
+        .cont3 div p {margin-top: 250px; font-size: 20px;}
+        .cont3 div a {
+            border: 1px solid #05d686; border-radius: 4px; padding: 15px 50px; 
+            color: #fff; background: #05d686; font-size: 20px; font-weight: 400; margin-top: 40px;
+            display: inline-block;
+        }
+        .footer {position: relative; color: #666666;}
+        .footer .container {overflow: hidden;}
+        .footer .container .logo2::before {
+            content: ''; background: url(/test/img/sp_svg_icon.png) no-repeat; 
+            width: 150px; height: 30px; position: absolute; background-position: 0 -30px;
+            top: 30px;
+
+        }
+        .footer .container .icon_box {position: absolute; top: 25px; right: 355px; overflow: hidden;}
+        .footer .container .icon {background: url(../test/img/sp_svg_icon.png); width: 21px; height: 21px; margin-left: 20px;;}
+        .footer .container .blog {float: left; background-position: -200px -120px;}
+        .footer .container .face {float: left; background-position: -164px -218px;}
+        .footer .container .insta {float: left; background-position: -138px -218px;}
+        .footer .container .you {float: left; background-position: -200px -172px;}
+        .footer .container .bottom1 {overflow: hidden; display: inline-block; position: relative;}
+        .footer .container .bottom1 li {float: left; margin-top: 70px; font-size: 13px; margin-left: 7px;}
+        .footer .container .bottom1 li:first-child {margin-left: 0;}
+        .footer .container .bottom1 li::before{content: ''; width: 1px; height: 15px; position: absolute; top: 71px; left: 122px; background: #666666;}
+        .footer .container .bottom2 {display: inline-block; margin-left: 20%;}
+        .footer .container .bottom2 li {font-size: 13px;}
+        .footer .container .bottom3 {overflow: hidden; float: right;}
+        .footer .container .bottom3 li {float: left; margin-top: 70px; font-size: 13px; margin-right: 7px; position: relative;}
+        .footer .container .bottom3 li::before{content: ''; width: 1px; height: 15px; position: absolute; top: 2px; left: -4px; background: #666666;}
+        .footer .container .bottom3 li:last-child {margin-right: 0;}
+
+
+
+
+ 
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+             <div class="container">
+                <div class="header"></div>
+                    <div class="logo"></div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">기술·솔루션</a></li>
+                            <li><a href="#">제품</a></li>
+                            <li><a href="#">플랫폼</a></li>
+                            <li><a href="#">파트너</a></li>
+                            <li><a href="#">리서치</a></li>
+                        </ul>
+                    </div>
+                    <div class="quick">
+                        <ul>
+                            <li><a href="#">Biz Start</a></li>
+                            <li><a href="#">비즈니스 문의</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="container">
+                <div class="banner">
+                    <h2>CLOVA Skill Tools</h2>
+                    <p>클로바는 CLOVA Extensions Kit와 Chatbot Builder를 제공하여<br> 새로운 Skill을 쉽고 빠르게 클로바에 추가할 수 있도록 도와드립니다.<br> 클로바에서 제공하는 개발자 도구들을 통해 새로운 음성 기술을 개발하고<br> 특별한 서비스로 더 많은 고객을 만나세요.</p>
+                    <a href="#">콘솔 바로가기</a>
+                    <a href="#">챗봇 빌더 바로가기</a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <section id="contents">
+            <div id="cont1">
+                <div class="container">
+                    <div class="cont1">
+                        <h2><span>CLOVA</span> Extensions Kit</h2>
+                        <p> CLOVA Extensions Kit는 외부 서비스나 IoT 기기를 제어할 수 있는<br> ‘CLOVA Skill’을 서비스할 수 있도록 필요한 도구와 인터페이스를 제공합니다.</p>
+                        <img src="https://static-clova.pstatic.net/static/70fd2ea/img/platform/diagram_cek.png" alt="이미지1">
+                        <a href="#">콘솔 바로가기</a>
+                    </div>
+                </div>
+            </div>
+            <div id="cont2">
+                <div class="container">
+                    <div class="cont2">
+                        <h2><span>CLOVA</span> Chatbot Builder</h2>
+                        <p>Chatbot Builder를 통해 개발자가 아닌 일반 사용자도 <br>쉽고 빠르게 챗봇을 만들고 서비스 할 수 있습니다.</p>
+                        <div class="chatbot">
+                            <ul class="bulider">
+                                <li class="speak"><em>대화 등록</em><p> 10개~15개의 대화 등록 적은 데이터로도 챗봇 생성 가능</p></li>
+                                <li class="work"><em>학습</em><p>방대한 네이버 DB와 함께 빠르게 학습하고 바로 확인 가능</p></li>
+                                <li class="service"><em>서비스 연결</em><p>서비스 연결 스마트 스피커, LINE, 네이버 톡톡에서 음성과 텍스트 모두 즉시 연동</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cont3">
+                <div class="container">
+                    <div class="cont3">
+                        <p>CLOVA Chatbot은 기업의 상담 콜센터를 대체하고,<br> 사용자의 흥미를 자극하는 재미있는 콘텐츠로 만들어지고 있습니다.</p>
+                        <ul>
+                            <li class="home"><em>마케팅 챗봇</em> <span>U+ 우리집AI β</span><p>유플러스 스피커 사용 고객에게<br> 우리집AI 상품을 소개해주는 챗봇</p></li>
+                            <li class="center"><em>정보성 챗봇</em> <span>네이버 고객센터 β</span> <p>네이버 주요 서비스에 대해<br> 도움말을 알려주는 챗봇</p></li>
+                            <li class="animal"><em>FUN 챗봇</em> <span>동물소리 번역기</span><p>동물 소리 발화를 유도하는<br>사용 재미를 주는 챗봇</p></li>
+                        </ul>
+                        <div class="bottom">
+                            <p>클로바 챗봇 빌더에서 나만의 챗봇을 만들어 보세요.</p>
+                            <a href="#">챗봇 빌더 바로가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="footer">
+            <div class="footer">
+                <div class="container">
+                    <div class="logo2"></div>
+                    <div class="icon_box">
+                        <ul>
+                            <li class="icon blog"></li>
+                            <li class="icon face"></li>
+                            <li class="icon insta"></li>
+                            <li class="icon you"></li>
+                        </ul>
+                    </div>
+                    <ul class="bottom1">
+                        <li>고객센터 1833-5387</li>
+                        <li>09:00-18:00(주말, 공휴일 휴무)</li>
+                    </ul>
+                    <ul class="bottom2">
+                        <li>Powered by <strong>NAVER · LINE</strong></li>
+                    </ul>
+                    <ul class="bottom3">
+                        <li>공지사항</li>
+                        <li>이용약관</li>
+                        <li>CLOVA 채용안내</li>
+                        <li>CLOVA JP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

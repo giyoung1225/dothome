@@ -193,8 +193,6 @@
             document.querySelector(".pageY").textContent = e.pageY;
         });
 
-
-
         const cursor = document.querySelector(".cursor");
         const follower = document.querySelector(".cursor-follower");
         const cursorText = document.querySelectorAll(".contents em");
@@ -207,18 +205,6 @@
             gsap.to(cursor, {duration: .3, left: e.pageX-cursorWidth, top: e.pageY-cursorWidth});
             gsap.to(follower, {duration: .8, left: e.pageX-followerWidth, top: e.pageY-followerWidth});
         });
-
-        
-        //마우스 오버효과
-        // cursorText.addEventListener("mouseenter", function(){
-        //     cursor.classList.add("active");
-        //     follower.classList.add("active");
-        // });
-        // cursorText.addEventListener("mouseleave", function(){
-        //     cursor.classList.remove("active");
-        //     follower.classList.remove("active");
-        // });
-
         //다중선택
         cursorText.forEach(elem => {
             elem.addEventListener("mouseenter", ()=>{
@@ -231,7 +217,15 @@
             });
         });
 
-        
+        //마우스 오버효과
+        // cursorText.addEventListener("mouseenter", function(){
+        //     cursor.classList.add("active");
+        //     follower.classList.add("active");
+        // });
+        // cursorText.addEventListener("mouseleave", function(){
+        //     cursor.classList.remove("active");
+        //     follower.classList.remove("active");
+        // });
     </script>
 </body>
 </html>
