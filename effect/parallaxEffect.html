@@ -78,7 +78,7 @@
     <div class="bs-header bgs5" id="content">
         <div class="container">
             <h1>parallaxEffect Reference v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://hgy5710.dothome.co.kr" target="_blank">hgy5710.dothome.co.kr</a></p>
+            <p><a href="http://hgy5710.dothome.co.kr" target="_blank">hgy5710.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
@@ -117,31 +117,69 @@
 });
 </code></pre>
                     <h2>자바스크립트</h2>
-<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelectorAll(".slider-wrap");
-const sliderImg = document.querySelectorAll(".slider-img");
-const slider = document.querySelectorAll(".slider");
+<pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
+    let pageYOffset = window.pageYOffset;
 
-let currentIndex = 0;               //현재 보이는 첫번 째 이미지
-let sliderCount = slider.length     //이미지 갯수
+    //출력용
+    document.querySelector(".pageYOffset").innerText = pageYOffset;
+    document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+    document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+    document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+    document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+    document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+    document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+    document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+    document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+    document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
 
-setInterval(() => {
-    let nextIndex = (currentIndex + 1) % sliderCount;
-                    // (0 + 1) % 5 -> 1
-                    // (1 + 1) % 5 -> 2
-                    // (2 + 1) % 5 -> 3
-                    // (3 + 1) % 5 -> 4
-                    // (4 + 1) % 5 -> 0
-                    // (0 + 1) % 5 -> 1
+    //출력용 글씨 색
+    if(pageYOffset > document.getElementById("section1").offsetTop){
+        document.querySelector(".s1OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s1OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section2").offsetTop){
+        document.querySelector(".s2OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s2OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section3").offsetTop){
+        document.querySelector(".s3OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s3OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section4").offsetTop){
+        document.querySelector(".s4OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s4OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section5").offsetTop){
+        document.querySelector(".s5OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s5OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section6").offsetTop){
+        document.querySelector(".s6OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s6OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section7").offsetTop){
+        document.querySelector(".s7OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s7OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section8").offsetTop){
+        document.querySelector(".s8OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s8OffsetTop").style.color = "white";
+    }
+    if(pageYOffset > document.getElementById("section9").offsetTop){
+        document.querySelector(".s9OffsetTop").style.color = "red";
+    } else {
+        document.querySelector(".s9OffsetTop").style.color = "white";
+    }
 
-    //slider.eq(currentIndex).fadeOut();
-    // slider[currentIndex].style.display = "none";
-    // slider[nextIndex].style.display = "block";
-
-    slider[currentIndex].style.opacity = "0";
-    slider[nextIndex].style.opacity = "1";
-
-    currentIndex = nextIndex;
-},3000);;
+});
 </code></pre>
                     
                 </div>
