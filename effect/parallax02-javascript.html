@@ -349,7 +349,15 @@
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);    
 
-            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2;
+            //forEach
+            document.querySelectorAll(".content-item").forEach((elem) => {
+                let target = elem.childNodes[7];
+                let offset = (pageYOffset - elem.offsetTop) * 0.2;
+                target.style.transform = "translateY("+ -offset +"px)";
+            });
+        });
+
+        // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2;
             // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
             // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
             // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
@@ -374,14 +382,6 @@
             //     let offset = (pageYOffset - document.getElementById("section"+ i).offsetTop) * 0.2;
             //     document.querySelector("#section"+i+" .content-item-desc").style.transform = "translateY("+ -offset +"px)"
             // }
-
-            //forEach
-            document.querySelectorAll(".content-item").forEach((elem) => {
-                let target = elem.childNodes[7];
-                let offset = (pageYOffset - elem.offsetTop) * 0.2;
-                target.style.transform = "translateY("+ -offset +"px)";
-            });
-        });
     </script>
 </body>
 </html>

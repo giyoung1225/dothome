@@ -118,73 +118,35 @@
 </code></pre>
                     <h2>자바스크립트</h2>
 <pre class="line-numbers language-js"><code>window.addEventListener("scroll", function(){
-    let pageYOffset = window.pageYOffset;
+    let pageYOffset = window.pageYOffset + screen.height/2;
 
     //출력용
     document.querySelector(".pageYOffset").innerText = pageYOffset;
-    document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-    document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-    document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-    document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-    document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-    document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-    document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-    document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-    document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
 
-    //출력용 글씨 색
-    if(pageYOffset > document.getElementById("section1").offsetTop){
-        document.querySelector(".s1OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s1OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section2").offsetTop){
-        document.querySelector(".s2OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s2OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section3").offsetTop){
-        document.querySelector(".s3OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s3OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section4").offsetTop){
-        document.querySelector(".s4OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s4OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section5").offsetTop){
-        document.querySelector(".s5OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s5OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section6").offsetTop){
-        document.querySelector(".s6OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s6OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section7").offsetTop){
-        document.querySelector(".s7OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s7OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section8").offsetTop){
-        document.querySelector(".s8OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s8OffsetTop").style.color = "white";
-    }
-    if(pageYOffset > document.getElementById("section9").offsetTop){
-        document.querySelector(".s9OffsetTop").style.color = "red";
-    } else {
-        document.querySelector(".s9OffsetTop").style.color = "white";
-    }
+    //출력용 한번에(for)
+    for (let i=1; i&lt;=9; i++){
+        document.querySelector(".s"+i+"OffsetTop").textContent = document.getElementById("section"+i).offsetTop;
+        //document.querySelector(".s"+i+"OffsetTop").innerText = document.getElementById("section1").offsetTop;
 
+        if(pageYOffset > document.getElementById("section"+i).offsetTop){
+            document.querySelector(".s"+i+"OffsetTop").style.color = "red";
+        } else {
+                document.querySelector(".s"+i+"OffsetTop").style.color = "white";
+        }
+    }
+    //나타나기 한번에
+    document.querySelectorAll(".content-item").forEach(elem => {
+        if(pageYOffset > elem.offsetTop){
+            elem.classList.add("show");
+        } else {
+            elem.classList.remove("show");
+        }    
+    });
 });
+
 </code></pre>
-                    
                 </div>
                 
-
                 <!-- //Intro1 -->          
             
                 <!-- Intro2 -->
@@ -217,7 +179,7 @@
     // $("#section9 .content-item-desc").css({transform : "translateX("+offset9+"px)"});
 
     //한번에 for문
-    // for(let i=1; i<=9; i++){
+    // for(let i=1; i&lt;=9; i++){
     //     let offset = (scrollTop - $("#section"+i).offset().top);
     //     $("#section"+i+" .content-item-desc").css({transform : "translateX("+offset+"px)"});
     // }
@@ -263,7 +225,7 @@
     // document.querySelector("#section9 .content-item-desc").style.transform = "translateY("+ -offset9 +"px)"
 
     //for문
-    // for(let i = 1; i<=9; i++){
+    // for(let i = 1; i&lt;=9; i++){
     //     let offset = (pageYOffset - document.getElementById("section"+ i).offsetTop) * 0.2;
     //     document.querySelector("#section"+i+" .content-item-desc").style.transform = "translateY("+ -offset +"px)"
     // }
