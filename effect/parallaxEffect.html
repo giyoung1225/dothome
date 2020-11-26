@@ -332,32 +332,89 @@ $(window).scroll(function(){
 });
 </code></pre>
                     <h2>자바스크립트</h2>
-<pre class="line-numbers language-js"><code>let pageYOffset = window.pageYOffset
+<pre class="line-numbers language-js"><code>document.querySelectorAll(".content-item-desc").forEach(elem => {
+    let splitText = elem.innerText;
+    let splitWrap = splitText.split("").join("</span><span aria-hidden: 'true'>");
+        splitWrap = "<span aria-hidden: 'true'>" + splitWrap + "</span>";
 
-const scroll = () => {
-    const newPageYOffset = window.pageYOffset;
-    const different = newPageYOffset - pageYOffset;
+    elem.innerHTML = splitWrap;
+    elem.setAttribute("aria-label", splitText);
+});
 
-    console.log("pageYOffset :" + pageYOffset);
-    console.log("newPageYOffset :" + newPageYOffset);
-    console.log("different :" + different);
+//한글자씩 나오게 하기(한번에)
+// $(".content-item").each(function(){
+//     if($(window).scrollTop() > $(this).offset().top){
+//         gsap.to($(this).find(".content-item-desc span"), {duration: .3, opacity: 1, y:0, stagger: 0.05, ease: Power1.ease});
+//     }
+// });
 
-    let target = document.querySelectorAll(".content-item-imgWrap");
+window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
-    //target.style.transform = "rotate("+different+"deg)";
-    //forEach
-    target.forEach((elem)=>{
-        elem.style.transform = "rotate("+different*+"deg)";
-    });
-    gsap.to(".content-item-imgWrap", {duration: .3, skewY: different*0.2, ease: Power1.out});
-    gsap.to(".content-item-num", {duration: .6, x: different*0.5, ease: Power4.out});
-    gsap.to(".content-item-desc", {duration: .6, skewX: different*0.2, ease: Power3.out});
-
-    pageYOffset = newPageYOffset
-
-    requestAnimationFrame(scroll);
-}
-scroll();
+    if(pageYOffset > document.getElementById("section1").offsetTop){
+        document.querySelectorAll("#section1 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section2").offsetTop){
+        document.querySelectorAll("#section2 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section3").offsetTop){
+        document.querySelectorAll("#section3 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section4").offsetTop){
+        document.querySelectorAll("#section4 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section5").offsetTop){
+        document.querySelectorAll("#section5 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section6").offsetTop){
+        document.querySelectorAll("#section6 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section7").offsetTop){
+        document.querySelectorAll("#section7 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section8").offsetTop){
+        document.querySelectorAll("#section8 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+    if(pageYOffset > document.getElementById("section9").offsetTop){
+        document.querySelectorAll("#section9 .content-item-desc span").forEach((elem, index) => {
+            setTimeout(()=>{
+                elem.classList.add("show");
+            }, 50 * (index + 1));
+        });
+    }
+});
 </code></pre>
                     
                 </div>
