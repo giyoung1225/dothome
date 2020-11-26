@@ -378,6 +378,110 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .video {position: relative; width: 100%; padding-bottom: 56.25%;}
 .video iframe {border: 0; position: absolute; width: 100%; height: 100%;}
 
+/* 마우스오버 */
+.side1 {position: relative;}
+.side1 .front {
+	transition: transform 1s;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+.side1 .back {
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	position: absolute; left: 0; top: 0; z-index: -1;
+}
+.side1 figcaption {
+	backface-visibility: hidden;
+	position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%, -50%) translatez(100px);
+	color: #fff; background: rgba(0,0,0,0.4);
+	padding: 15px; text-align: center;
+	line-height: 1.4;
+}
+
+.side1 .front {
+	transform: rotateY(0deg);
+}
+.side1:hover .front {
+	transform: rotateY(180deg);
+}
+.side1 .back {
+	transform: rotateY(-180deg);
+}
+.side1:hover .back {
+	transform: rotateY(0deg);
+}
+
+.side2 {
+	position: relative;
+}
+.side2 img {
+	opacity: 1;
+	transition: all .3s ease-in-out;
+}
+.side2:hover img {
+	opacity: 0.5;
+}
+.side2::before {
+	content: '';
+	width: 60px; height: 1px;
+	position: absolute; right: -100px; bottom: 50%;
+	transform: translate(50%, 50%);
+	background: #fff;
+	transition: all 0.33s ease-in-out;
+	z-index: 10;
+}
+.side2::after {
+	content: '';
+	width: 1px; height: 60px;
+	position: absolute; right: 50%; bottom: -100px;
+	transform: translate(50%, 50%);
+	background: #fff;
+	transition: all 0.33s ease-in-out;
+}
+.side2:hover::before {
+	right: 50%; bottom: 50%;
+}
+.side2:hover::after {
+	right: 50%; bottom: 50%;
+}
+
+.side3 {position: relative;}
+.side3 .front3 {}
+.side3 .back3 {position: absolute; left: 0; top: 0; z-index: -1;}
+
+.side3 figure {position: relative}
+.side3 figcaption {
+	position: absolute; 
+	bottom: 0; left: 0; color: #fff;
+	background: rgba(0,0,0,0.8);
+	width: 100%; padding: 20px;
+	box-sizing: border-box;
+}
+.side3 figcaption h3 {
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+.side3 figcaption p {
+	font-size: 16px;
+}
+
+.side3 .front3 {
+	transform: rotateX(0deg);
+	transition: transform 1s;
+	backface-visibility: hidden;
+}
+.side3:hover .front3 {
+	transform: rotateX(180deg);	
+}
+.side3 .back3 {
+	transform: rotateX(-180deg);
+	transition: transform 1s;
+}
+.side3:hover .back3 {
+	transform: rotateX(0deg);
+}
+
 /* 푸터 */
 .footer {text-align: center; padding: 30px 50px;}
 .footer li {
