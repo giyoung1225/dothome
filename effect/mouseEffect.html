@@ -158,7 +158,7 @@ document.querySelectorAll(".contents em").forEach(elem => {
 
                 <!-- Intro2 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Mouse Effect02</h2>
+                    <h2 id="intro2" class="page-header">Mouse Effect02</h2>
                     <p class="bs-callout bs-callout-info">hover효과를 이용하여 mousehover했을 때, 커서의 모양이 확대되도록 구현했습니다.</p>
                     <iframe width="100%" height="600" src="mouseEffect02-jquery.html" frameborder="0"></iframe>
                     <h2>제이쿼리</h2>
@@ -236,7 +236,80 @@ cursorText.forEach(elem => {
 </code></pre>
                 </div>
 
-                <!-- //Intro1 -->            
+                <!-- //Intro2 -->    
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Mouse Effect03</h2>
+                    <p class="bs-callout bs-callout-info">hover효과를 이용하여 mousehover했을 때, mix-blend-mode가 들어가도록 구현했습니다.</p>
+                    <iframe width="100%" height="600" src="mouseEffect03-jquery.html" frameborder="0"></iframe>
+                    <h2>제이쿼리</h2>
+<pre class="line-numbers language-js"><code>//움직임 효과
+$(document).mousemove(function(e){
+    gsap.to(".cursor", {duration: 0.4, left: e.pageX, top: e.pageY});
+});
+
+//오버 효과
+$(".contents em").hover(function(){
+    $(".cursor").addClass("active");
+}, function(){
+    $(".cursor").removeClass("active");
+});
+
+//출력용
+$(".info.bottom li").click(function(){
+    const text = $(this).text();
+
+    //클릭한 글씨를 커서에 클래스로 추가
+    $(".info.bottom li").removeClass("active");
+    $(this).addClass("active");
+    $(".cursor").css("mix-blend-mode", text)
+});
+
+// 제목에 마우스오버했을때
+$(".info.left h1").hover(function(){
+    $(".cursor").addClass("act");
+}, function(){
+    $(".cursor").removeClass("act");
+});
+</code></pre>
+                    <h2>자바스크립트</h2>
+<pre class="line-numbers language-js"><code>//선택자
+const cursor = document.querySelector(".cursor");
+const contentEm = document.querySelectorAll(".contents em");
+const infoLi = document.querySelectorAll(".info.bottom li");
+
+//움직임 효과
+document.addEventListener("mousemove", function(e){
+    gsap.to(cursor, {duration: 0.5, left: e.pageX, top: e.pageY});
+});
+
+//오버효과
+contentEm.forEach(elem => {
+    elem.addEventListener("mouseenter", () => {
+        cursor.classList.add("active");
+    });
+    elem.addEventListener("mouseleave", () => {
+        cursor.classList.remove("active");
+    });
+});
+
+//출력용
+infoLi.forEach(info => {
+    info.addEventListener("click", function(){
+        const text = this.textContent || this.innerHTML;
+        cursor.style.mixBlendMode = text;
+
+        infoLi.forEach(li => {
+            li.classList.remove("active");
+            this.classList.add("active");
+        });
+    });
+});
+</code></pre>
+                </div>
+
+                <!-- //Intro3 -->
+
             </div>
             <!-- //col-md-12 -->
 

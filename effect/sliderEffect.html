@@ -87,8 +87,8 @@
                     </script>
                 </div>
                 <!-- //배너 광고 1140 -->
-                 <!-- Intro1 -->
-                 <div class="bs-docs-section">
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">SliderEffect01</h2>
                     <p class="bs-callout bs-callout-info">3초에 한번씩 이미지가 변경되도록 구현했습니다.</p>
                     <iframe width="100%" height="800px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
@@ -144,7 +144,65 @@ setInterval(() => {
     currentIndex = nextIndex;
 },3000);;
 </code></pre>
-                <!-- //Intro1 -->             
+                <!-- //Intro1 -->   
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">SliderEffect02</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 옆으로 넘어가도록 구현했습니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect02-jquery.html" frameborder="0"></iframe>
+                </div>
+                <h2>제이쿼리</h2>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+
+
+
+setInterval(function(){
+    // if(currentIndex < sliderCount - 1){
+    //     currentIndex++;
+    // } else {
+    //     currentIndex = 0;
+    // }
+    currentIndex < sliderCount - 1 ? currentIndex++ :  currentIndex = 0;
+
+    let sliderPosition = currentIndex * (-800) + "px";
+                            // 0 * -800px > 0
+                            // 1 * -800px > -800px
+                            // 2 * -800px > -1600px
+                            // 3 * -800px > -2400px
+    sliderImg.animate({left : sliderPosition}, 400);                        
+
+},3000);
+</code></pre>
+<h2>자바스크립트</h2>
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap")
+const sliderImg = document.querySelector(".slider-img")
+const slider = document.querySelectorAll(".slider")
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = sliderWrap.clientWidth;
+
+
+setInterval(function(){
+    // if (currentIndex < sliderCount - 1){
+    //     currentIndex++;
+    // } else {
+    //     currentIndex = 0;
+    // }
+
+    currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
+    let sliderPosition = currentIndex * -sliderWidth;
+    // sliderImg.style.left = sliderPosition;
+    // sliderImg.style.transition = "all .6s";
+    gsap.to(sliderImg, {duration: 1, left: sliderPosition, ease: "expo.out"});
+},3000);
+</code></pre>
+                <!-- //Intro1 -->          
             </div>
             <!-- //col-md-12 -->
 
