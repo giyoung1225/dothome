@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect05 - jQuery</title>
+    <title>Mouse Effect06 - jQuery</title>
     
     <style>
         @font-face {
@@ -150,7 +150,7 @@
 <body>
     <!-- //info -->
     <div class="info left">
-        <h1>Mouse Effect05 - jQuery</h1>
+        <h1>Mouse Effect06 - jQuery</h1>
         <p>마우스 방향에 따라 움직이기</p>
     </div>
     <div class="info right">
@@ -159,8 +159,8 @@
             <li><a href="mouseEffect02-jquery.html">2</a><a href="mouseEffect02-javascript.html">2</a></li>
             <li><a href="mouseEffect03-jquery.html">3</a><a href="mouseEffect03-javascript.html">3</a></li>
             <li><a href="mouseEffect04-jquery.html">4</a><a href="mouseEffect04-javascript.html">4</a></li>
-            <li><a href="mouseEffect05-jquery.html" class="active">5</a><a href="mouseEffect05-javascript.html">5</a></li>
-            <li><a href="mouseEffect06-jquery.html">6</a><a href="mouseEffect06-javascript.html">6</a></li>
+            <li><a href="mouseEffect05-jquery.html">5</a><a href="mouseEffect05-javascript.html">5</a></li>
+            <li><a href="mouseEffect06-jquery.html" class="active">6</a><a href="mouseEffect06-javascript.html">6</a></li>
             <li><a href="mouseEffect07-jquery.html">7</a><a href="mouseEffect07-javascript.html">7</a></li>
             <li><a href="mouseEffect08-jquery.html">8</a><a href="mouseEffect08-javascript.html">8</a></li>
             <li><a href="mouseEffect09-jquery.html">9</a><a href="mouseEffect09-javascript.html">9</a></li>
@@ -169,8 +169,8 @@
 
     <div class="info bottom">
         <ul>
-           <li>clientX : <span class="clientX">0</span></li>
-           <li>clientY : <span class="clientY">0</span></li>
+           <li>clientX : <span class="pageX">0</span></li>
+           <li>clientY : <span class="pageY">0</span></li>
         </ul>
     </div>
     <!-- //info -->
@@ -196,22 +196,7 @@
 
     <script>
         
-        $(".move-image").mousemove(function(e){
-            gsap.to(".cursor", {duration: 0.2, left: e.pageX - 10, top: e.pageY - 10});
-            
-
-            let x = e.clientX - ($(".move-image").width()/2 + $(".move-image").position().left);
-            let y = e.clientY - ($(".move-image").height()/2 + $(".move-image").position().top);
-
-            $(".img").attr({"style": "transform: translate("+x/20+"px, "+y/20+"px)"});
-        });
-
-
-        //출력용
-        $(window).mousemove(function(e){
-            $(".clientX").text(e.clientX);
-            $(".clientY").text(e.clientY);
-        });
+        
     </script>
 </body>
 </html>
