@@ -202,7 +202,177 @@ setInterval(function(){
     gsap.to(sliderImg, {duration: 1, left: sliderPosition, ease: "expo.out"});
 },3000);
 </code></pre>
-                <!-- //Intro1 -->          
+                <!-- //Intro2 -->   
+                
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">SliderEffect03</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 연속적으로 옆으로 넘어가도록 구현했습니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect03-jquery.html" frameborder="0"></iframe>
+                </div>
+                <h2>제이쿼리</h2>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+
+setInterval(function(){
+    sliderImg.animate({left: "-800px"}, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left", "");
+    });
+}, 3000);
+</code></pre>
+<h2>자바스크립트</h2>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">SliderEffect04</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 연속적으로 위로 넘어가도록 구현했습니다.</p>
+                    <iframe width="100%" height="800px" src="sliderEffect04-jquery.html" frameborder="0"></iframe>
+                </div>
+                <h2>제이쿼리</h2>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderCount = slider.length - 1;
+let sliderHeight = slider.height();
+let sliderSpeed = 400;
+
+
+//한바퀴
+// setInterval(() => {
+//     currentIndex < sliderCount ? currentIndex++ : currentIndex = 0;
+
+//     let sliderPosition = currentIndex * -sliderHeight;
+//     sliderImg.animate({top: sliderPosition}, sliderSpeed);
+
+// }, 3000);
+
+//연속적으로
+setInterval(() => {
+    sliderImg.animate({top: -sliderHeight}, sliderSpeed, function(){
+        $(".slider:eq(0)").appendTo(sliderImg);
+        sliderImg.css("top", "");
+    });
+}, 3000);
+</code></pre>
+<h2>자바스크립트</h2>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">SliderEffect05</h2>
+                    <p class="bs-callout bs-callout-info">버튼을 클릭하면 이미지가 넘어가도록 구현했습니다</p>
+                    <iframe width="100%" height="800px" src="sliderEffect05-jquery.html" frameborder="0"></iframe>
+                </div>
+                <h2>제이쿼리</h2>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const slideBtn = $(".slider-btn")
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderHeight = slider.height();
+let sliderTotalWidth = sliderWidth * sliderCount;
+
+sliderImg.css({width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth});
+$(".slider:last-child").prependTo(sliderImg);
+
+function moveLeft(){
+    sliderImg.animate({left: + sliderWidth}, 400, function(){
+        $(".slider:last-child").prependTo(sliderImg);
+        sliderImg.css("left", "");
+    });
+}
+function moveRight(){
+    sliderImg.animate({left: - sliderWidth}, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left", "");
+    });
+}
+
+
+slideBtn.find(".prev").click(function(){
+    moveLeft();
+});
+slideBtn.find(".next").click(function(){
+    moveRight();
+});
+</code></pre>
+<h2>자바스크립트</h2>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">SliderEffect06</h2>
+                    <p class="bs-callout bs-callout-info">3단 구조로 만들어 버튼을 클릭하면 이미지가 넘어가도록 구현했습니다</p>
+                    <iframe width="100%" height="800px" src="sliderEffect06-jquery.html" frameborder="0"></iframe>
+                </div>
+                <h2>제이쿼리</h2>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn")
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderShowNumber = 3;
+let currentIndex = 0;
+
+let sliderCopy = $(".slider:lt("+ sliderShowNumber +")").clone();
+sliderImg.append(sliderCopy);
+
+
+function moveLeft(){
+    if(currentIndex == 0){  //처음 이미지
+        currentIndex = sliderCount;
+        sliderImg.css("marginLeft", sliderWidth * -currentIndex);
+    }
+    currentIndex--;
+    sliderImg.animate({"margin-left": -sliderWidth * currentIndex}, 400);
+}
+
+function moveRight(){   //마지막 이미지
+    if(currentIndex == sliderCount){
+        currentIndex = 0;
+        sliderImg.css("marginLeft", currentIndex);
+
+    }
+    currentIndex++;
+    sliderImg.stop().animate({"margin-left": -sliderWidth * currentIndex}, 400);
+}
+
+
+
+//버튼 클릭하기
+sliderBtn.on("click", "a", function(){
+    if($(this).hasClass("prev")) {
+        moveLeft();
+    } else {
+        moveRight();
+    }
+    console.log(currentIndex);
+});
+</code></pre>
+<h2>자바스크립트</h2>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                <!-- //Intro6 -->
+
+
             </div>
             <!-- //col-md-12 -->
 
