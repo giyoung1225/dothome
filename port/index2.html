@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+    
+    <div id="contents">
+        <section id="section1"
+           data-0 = "transform:rotate(0deg)"
+           data-5000 = "transform:rotate(-360deg);"
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </section><!-- //section1 -->
+
+        <section id="section2"
+            data-0 = "transform:rotate(0deg)"
+            data-5000 = "transform:rotate(-180deg)"
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </section><!-- //section2 -->
+
+        <section id="section3"
+            data-5000 = "transform:translate(-7100px)"
+            data-10000 = "transform:translate(-2540px)"
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </section><!-- //section3 -->
+        
+        <section id="section4"    
+            data-0 = "transform: translate(7100px)"
+            data-20000 = "transform:translate(-5540vw)"
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </section><!-- //section4 -->
+
+        <section id="section5"
+            data-15000 = "transform:rotate(0deg)"
+            data-25000 = "transform:rotate(180deg)"
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </section><!-- //section5 -->
+        <section id="section6"
+            data-24000 = "transform: translateY(-520%)"
+            data-30000 = "transform: translateY(0)"
+        >
+            <div></div>
+            <div></div>
+            <div></div>
+        </section><!-- //section6 -->
+    </div>
+    
+    
+    <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script>
+        //skrollr 
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+    </script>
+</body>
+</html>
