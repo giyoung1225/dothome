@@ -21,6 +21,7 @@
         * {margin: 0; padding: 0; box-sizing: border-box;}
 
         body {height: 20000px; font-family: 'NEXON Lv2 Gothic Bold';}
+        em {font-style: normal;}
 
         .scroll {
             position: fixed; right: 10px; top: 10px;   
@@ -151,8 +152,72 @@
             width: 100%; height: 100%;
             transform: translate(-50%, -50%);
         }
+        .s2Txt04 .imgWrap > div .view {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%, -50%);
+            top: 50%;
+            width: 100px; height: 100px;
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 100px;
+            text-decoration: none;
+            transition: all 400ms ease;
+        }
         
+        .s2Txt04 .imgWrap > div .view:hover {
+            box-shadow: 0 0 10px inset rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.7);
+        }
+        .s2Txt04 .imgWrap > div .view.white {
+            background: rgba(255,255,255,.5);
+            color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 0 inset rgba(255,255,255,0.9);
+        }
+        .s2Txt04 .imgWrap > div .view.white:hover {
+            background: rgba(255,255,255,.7);
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 6px inset rgba(255,255,255,0.9);
+        }
 
+        /* section3 */
+        .s3Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        .s3Txt02 h2 {
+            font-size: 4vw;
+            text-align: center;
+            line-height: 1.2;
+            background-repeat: no-repeat;
+            background-image: url(/effect/img/textbg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+            transform: translate(-50%, -50%) scale(1.5);
+        }
+
+        .txtBox {}
+        .txtBox1 {}
+        .txtBox2 {}
+        .txtBox3 {}
+        .txtBox4 {}
+        .txtBox5 {}
+        .txtBox6 {}
+
+        .aniBox1 {}
+        .aniBox2 {}
+        .aniBox3 {}
+        .aniBox4 {}
+        .aniBox5 {}
+        .aniBox6 {}
+        
     </style>
 </head>
 <body>
@@ -221,7 +286,6 @@
                         data-8600="opacity:0"
                         data-9600="opacity:1"
                         data-10800="opacity:0"
-
                     >웹 접근성을 지킨 기본적인 웹 표준 사이트입니다.</p>
                     <p class="fixed text2"
                         data-10800="left:100%; opacity:0"
@@ -264,30 +328,78 @@
                         <div class="img1"
                             data-9600 = "left: 50%"
                             data-11600 = "left: -50%"
-                        ><img src="img/apple-webstandard.png" alt="웹표준"></div>
+                        ><img src="img/apple-webstandard.png" alt="웹표준">
+                            <a href="#" class="view">VIEW</a>
+                        </div>
                         <div class="img2"
                             data-9600 = "left: 150%"
                             data-11600 = "left: 50%"
                             data-13600 = "left: 50%"
                             data-15600 = "left: -50%"
-                        ><img src="img/apple-responsive.png" alt="반응형"></div>
+                        ><img src="img/apple-responsive.png" alt="반응형">
+                            <a href="#" class="view">VIEW</a>
+                        </div>
                         <div class="img3"
                             data-13600 = "left: 150%"
                             data-15600 = "left: 50%"
                             data-17600 = "left: 50%"
                             data-19600 = "left: -50%"
-                        ><img src="img/apple-megabox.png" alt="반응형"></div>
+                        ><img src="img/apple-megabox.png" alt="기업사이트">
+                            <a href="#" class="view">VIEW</a>
+                        </div>
                         <div class="img4"
                             data-17600 = "left: 150%"
                             data-19600 = "left: 50%"
-                        ><img src="img/apple-port.png" alt="반응형"></div>
+                        ><img src="img/apple-port.png" alt="리엑트">
+                            <a href="#" class="view white">VIEW</a>
+                        </div>
                     </div>
                     
                 </div>
             </div>
         </section>
         <!-- //section2 -->
-        <section id="section3"></section><!-- //section3 -->
+
+        <section id="section3"
+            data-25000="display:none"
+            data-25001="display:block"
+            data-35000="display:block"
+            data-35001="display:none"
+        >
+            <div class="s3Txt01 fixed" data-title="검은색 배경"
+                data-25001="width:200vw; height:200vw"
+                data-29000="width:30vw; height:30vw"
+            >
+                <div class="s3Txt02">
+                    <h2 class="txtBox fixed"
+                        data-29000="left:50%"
+                        data-32000="left:-200%"
+                    ><span>I've been working on Sites</span></h2>
+                    <h2 class="txtBox1 fixed"
+                        data-29000="left:200%"
+                        data-32000="left:50%"
+                    ><span>Animation1</span></h2>
+                    <!-- <h2 class="txtBox2 fixed"><span>Animation2</span></h2>
+                    <h2 class="txtBox3 fixed"><span>Animation3</span></h2>
+                    <h2 class="txtBox4 fixed"><span>Animation4</span></h2>
+                    <h2 class="txtBox5 fixed"><span>Animation5</span></h2>
+                    <h2 class="txtBox6 fixed"><span>Animation6</span></h2> -->
+                    
+                </div>
+            </div>
+            <div class="s3Txt03">
+                <div class="aniBox1 fixed">
+                    <iframe src="https://codepen.io/giyoung1225/pen/YzWReRO" frameborder="0"></iframe>
+                </div>
+                <div class="aniBox2 fixed"></div>
+                <div class="aniBox3 fixed"></div>
+                <div class="aniBox4 fixed"></div>
+                <div class="aniBox5 fixed"></div>
+                <div class="aniBox6 fixed"></div>
+            </div>
+            
+        </section>
+        <!-- //section3 -->
         <section id="section4"></section><!-- //section4 -->
         <section id="section5"></section><!-- //section5 -->
         <section id="section6"></section><!-- //section6 -->
