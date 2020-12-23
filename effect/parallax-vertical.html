@@ -288,16 +288,17 @@
 
         
 
-        $(document).keydown(function(){
+        $(document).keydown(function(e){
             if(e.which == 39){
                 let scrollTop = $(document).scrollTop();
-                $(window).scrollTop(scrollTop + 50);
+                $(window).scrollTop(scrollTop + 50)
             }
             if(e.which == 37){
                 let scrollTop = $(document).scrollTop();
-                $(window).scrollTop(scrollTop - 50);
+                $(window).scrollTop(scrollTop - 50)
             }
-        });
+            // console.log(event.keyCode);
+        })
     </script>
 </body>
 </html>

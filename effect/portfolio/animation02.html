@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 100vh;
+        background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+        overflow-y: hidden;
+    }
+    .loding {
+        width: 20px; height: 150px;
+        /*  background: #fff; */
+        position:absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        animation: circle 1s ease 100;
+    }
+    .loding .circle1 {
+        display: block; width: 20px; height: 20px;
+        border-radius: 50%;
+        background: #fff;
+    }
+    .loding .circle2 {
+        display: block; width: 20px; height: 20px;
+        border-radius: 50%;
+        background: #fff;
+        margin-top: 110px;
+    }
+
+    @keyframes circle {
+        0% {transform: translate(-50%, -50%) rotate(0deg)}
+        100% {transform: translate(-50%, -50%) rotate(360deg)}
+    }
+</style>
+<body>
+    <div class="loding">
+        <span class="circle1"></span>
+        <span class="circle2"></span>
+      </div>
+</body>
+</html>
