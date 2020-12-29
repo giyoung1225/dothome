@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+/* layout */
+body {
+    background-image: url(../img/portbg1_2.png);
+    background-size: 1000px;
+}
+#contents {
+    position: fixed;
+    left: 100%; top: 50%;
+    height: 100vh;
+}
+#section1 {
+    position: absolute; left: 50%; top: 50%;
+    width: 100vw; height: 100vh; 
+    background: url(../img/portbg1_2.png);
+    background-size: 1000px;
+    transform: translate(-100%, -100%)
+}
+#section2 {
+    position: absolute; left: 50%; top: 50%;
+    width: 100vh; height: 100vw; 
+    background: url(../img/portbg1_2.png);
+    background-size: 1000px;
+    transform: translate(0%, -100%)
+}
+#section3 {
+    position: absolute; left: 50%; top: 50%;
+    width: 100vw; height: 100vh; 
+    background: url(../img/portbg1_2.png);
+    background-size: 1000px;
+}
+#section4 {
+    position: absolute; left: 50%; top: 50%;
+    width: 100vh; height: 100vw; 
+    background: url(../img/portbg1_2.png);
+    background-size: 1000px;
+    transform: translate(-100%, 0%)
+}
+
+.sec1 {
+    width: 100%; height: 100%;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    mix-blend-mode: exclusion;
+}
+.sec2 {
+    width: 100%; height: 100%;
+    mix-blend-mode: color-burn;
+    border: 2px solid #000;
+}
+.sec3 {
+    width: 100%; height: 100%;
+    mix-blend-mode: color-burn;
+    border: 2px solid #000;
+}
+
+.text-wrap h1 {
+    position: fixed;
+    left: 20px; top: 20px;
+    font-size: 4vw;   
+}
+
+.sec1 {
+    display: flex;
+}
+.sec1 .box1 {
+    position: relative;
+    flex: 0 0 60%;
+}
+.sec1 .box1 h1 {
+    padding: 40px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+}
+.sec1 .box1 .desc {
+    position: absolute;
+    right: 40px; top: 40px;
+    width: 40%;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-size: 20px;
+    line-height: 1.5;
+}
+.sec1 .box1 .desc2 {
+    position: absolute;
+    left: 40px; bottom: 40px;
+    width: 40%;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-size: 70px;
+    line-height: 1.3;
+}
+
+
+.sec1 .box2 {
+    flex: 0 0 40%;
+}
+.sec1 .box2-1 {
+    height: 70vh;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+}
+.sec1 .box2-2 {
+    height: 30vh;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+
+
+
+
+
+
+
