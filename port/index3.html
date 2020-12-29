@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        * {margin: 0; padding: 0;}
+        #contents {
+            position: fixed;
+            left: 100%; top: 50%;
+            background: red;
+            height: 100vh;
+        }
+        
+        
+        #section1 {
+            position: absolute; left: 50%; top: 50%;
+            width: 100vw; height: 100vh; background: #111;
+            transform: translate(-100%, -100%)
+        }
+        #section2 {
+            position: absolute; left: 50%; top: 50%;
+            width: 100vh; height: 100vw; background: #444;
+            transform: translate(0%, -100%)
+        }
+        #section3 {
+            position: absolute; left: 50%; top: 50%;
+            width: 100vw; height: 100vh; background: #777;
+        }
+        #section4 {
+            position: absolute; left: 50%; top: 50%;
+            width: 100vh; height: 100vw; background: #999;
+            transform: translate(-100%, 0%)
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div id="contents"
+       data-0 ="transform:rotate(0deg)"
+       data-1000 ="transform:rotate(-360deg)"
+            >
+        <section id="section1">section1</section>
+        <section id="section2">section2</section>
+        <section id="section3">section3</section>
+        <section id="section4">section4</section>
+    </div>
+    
+     <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script>
+        //skrollr 
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+    </script>
+</body>
+</html>
