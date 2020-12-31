@@ -1,22 +1,95 @@
+/* font */
 @font-face {
-    font-family: 'NEXON Lv1 Gothic OTF Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
 }
+
+
 @font-face {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Medium'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: 'NEXON Lv2 Gothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Regular'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
 }
-@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Light'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 100;
+    src: local('Spoqa Han Sans Thin'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Medium'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Regular'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Light'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 100;
+    src: local('Spoqa Han Sans Thin'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@3.1.0/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+}
 
 /* layout */
 body {
@@ -27,6 +100,7 @@ body {
     position: fixed;
     left: 100%; top: 50%;
     height: 100vh;
+    font-family: 'Spoqa Han Sans';
 }
 #section1 {
     position: absolute; left: 50%; top: 50%;
@@ -56,6 +130,8 @@ body {
     transform: translate(-100%, 0%)
 }
 
+
+/* sec1 */
 .sec1 {
     width: 100%; height: 100%;
     border: 2px solid #000;
@@ -69,7 +145,12 @@ body {
 }
 .sec3 {
     width: 100%; height: 100%;
-    mix-blend-mode: color-burn;
+    mix-blend-mode: difference;
+    border: 2px solid #000;
+}
+.sec4 {
+    width: 100%; height: 100%;
+    mix-blend-mode: difference;
     border: 2px solid #000;
 }
 
@@ -85,29 +166,31 @@ body {
 .sec1 .box1 {
     position: relative;
     flex: 0 0 60%;
-    height: 100vw;
+    height: 100vh;
 }
 .sec1 .box1 h1 {
-    padding: 40px;
+    padding: 120px;
+    padding-left: 120px;
     font-size: 50px;
     text-transform: uppercase;
-    font-family: 'NEXON Lv1 Gothic OTF Light';
 }
 .sec1 .box1 .desc {
     position: absolute;
-    right: 40px; top: 40px;
+    right: 120px; top: 120px;
     width: 40%;
-    font-family: 'NEXON Lv1 Gothic OTF Light';
     font-size: 20px;
     line-height: 1.5;
 }
 .sec1 .box1 .desc2 {
     position: absolute;
-    left: 40px; bottom: 40px;
-    width: 40%;
-    font-family: 'NEXON Lv1 Gothic OTF Light';
+    left: 120px; bottom: 150px;
+    width: 50%;
     font-size: 70px;
     line-height: 1.3;
+    font-weight: 100;
+}
+.sec1 .box1 .desc2 > span {
+    font-weight: 700;
 }
 
 
@@ -115,66 +198,383 @@ body {
     flex: 0 0 40%;
 }
 .sec1 .box2-1 {
+    position: relative;
+    display: flex;
     height: 70vh;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
 }
+.box2-1Top {
+    display: flex;
+    width: 100%;
+    margin: 100px;
+}
+.box2-1Top p {
+    flex: 1 1 50%;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box2-1Top p:nth-child(2) {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 20px;
+}
+.box2-1Bottom {
+    position: absolute;
+    left: 100px; bottom: 90px;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
 .sec1 .box2-2 {
     height: 30vh;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 50px;
+    font-size: 1vw;
+}
+.sec1 .box2-2 > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
+.sec1 .box2-2 .menu a {
+    border: 2px solid #000;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+}
+.scroll {position: relative;}
+.scroll a {
+    color: #000;
+}
 
+.scroll a span {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 70px;
+    height: 100px;
+    margin-left: -55px;
+    padding-top: 100px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+.scroll a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #000;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+/* sec2 */
 .sec2 {
     display: flex;
 }
 .sec2 .box1 {
     position: relative;
-    flex: 0 0 60%;
+    flex: 0 0 90%;
     transform: rotate(90deg);
     height: 60vw; width: 90vh;
 }
 .sec2 .box1 h1 {
-    padding: 40px;
+    padding: 150px 40px 40px 40px;
     font-size: 50px;
     text-transform: uppercase;
-    font-family: 'NEXON Lv1 Gothic OTF Light';
 }
 .sec2 .box1 .desc {
     position: absolute;
-    right: 40px; top: 40px;
+    right: -90px; top: 150px;
     width: 40%;
-    font-family: 'NEXON Lv1 Gothic OTF Light';
     font-size: 20px;
     line-height: 1.5;
 }
 .sec2 .box1 .desc2 {
     position: absolute;
-    left: 40px; bottom: 40px;
+    left: 40px; bottom: 290px;
     width: 40%;
-    font-family: 'NEXON Lv1 Gothic OTF Light';
+    font-weight: 800;
     font-size: 70px;
     line-height: 1.3;
 }
-
+.sec2 .box1 .desc2 span {
+    font-weight: 100;
+}
+.sec2 .box1 > div {
+    position: relative;
+}
+.sec2 .box1 > div a {
+    position: absolute;
+    right: -90px; top: 720px;
+    display: inline-block;
+    color:#000;
+    background: #fff;
+    text-align: left;
+    padding-left: 9px;
+    font-size: 50px;
+    width: 150px; height: 250px;
+}
 
 .sec2 .box2 {
+    position: relative;
     flex: 0 0 40%;
     transform: rotate(90deg);
 }
 .sec2 .box2-1 {
-    height: 70vh;
+    position: absolute;
+    left: 113%; bottom: -7.2%;
+    height: 100vh; width: 30vw;
+    border-left: 2px solid #000;
     border-bottom: 2px solid #000;
+}
+
+.sec2 .box2-1 .box2-1Bottom {
+    position: absolute;
+    left: 100px; top: 700px;
+}
+
+
+.sec2 .box2-2 {
+    position: absolute;
+    left: 113%; bottom: -183px;
+    height: 20vh; width: 35vw;
+    border-top: 2px solid #000;
     border-left: 2px solid #000;
 }
 .sec2 .box2-2 {
     height: 30vh;
     border-bottom: 2px solid #000;
     border-left: 2px solid #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 50px 0px 50px;
+    font-size: 1vw;
+}
+.sec2 .box2-2 > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.sec2 .box2-2 .menu a {
+    border: 2px solid #000;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+}
+
+/* sec3 */
+.sec3 {
+    display: flex;
+    transform: rotate(180deg);
+}
+.sec3 .box1 {
+    position: relative;
+    flex: 0 0 60%;
+    height: 100vh;
+}
+.sec3 .box1 h1 {
+    padding: 120px;
+    padding-left: 120px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.sec3 .box1 .desc {
+    position: absolute;
+    right: 175px; top: 120px;
+    width: 30%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.sec3 .box1 .desc2 {
+    position: absolute;
+    left: 120px; bottom: 100px;
+    width: 50%;
+    font-size: 110px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.sec3 .box1 > div {
+    position: relative;
+}
+.sec3 .box1 > div a {
+    position: absolute;
+    right: 190px; top: 650px;
+    display: inline-block;
+    color:#000;
+    background: #fff;
+    text-align: center;
+    font-size: 50px;
+    width: 150px; height: 250px;
 }
 
 
+.sec3 .box2 {
+    flex: 0 0 40%;
+    
+}
+.sec3 .box2-1 {
+    position: relative;
+    display: flex;
+    height: 70vh;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+}
+.box2-1Top {
+    display: flex;
+    width: 100%;
+    margin: 100px;
+}
+.box2-1Top p {
+    flex: 1 1 50%;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box2-1Top p:nth-child(2) {
+    font-size: 20px;
+    text-align: right;
+    padding-right: 20px;
+}
+.box2-1Bottom {
+    position: absolute;
+    left: 100px; bottom: 90px;
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.sec3 .box2-2 {
+    height: 30vh;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 50px;
+    font-size: 1vw;
+}
+.sec3 .box2-2 > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.sec3 .box2-2 .menu a {
+    border: 2px solid #000;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+}
 
 
+/* sec4 */
+.sec4 {
+}
+.sec4 .box1 {
+    position: relative;
+    transform: rotate(-90deg);
+    height: 100vh; width: 50vw;
+    bottom: -1100px;
+}
+.sec4 .box1 h1 {
+    padding: 150px 40px 40px 40px;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.sec4 .box1 .desc {
+    position: absolute;
+    right: -40px; top: 150px;
+    width: 40%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.sec4 .box1 .desc2 {
+    position: absolute;
+    left: 40px; bottom: 90px;
+    width: 40%;
+    font-weight: 700;
+    font-size: 110px;
+    line-height: 1.3;
+}
+.sec4 .box1 .desc2 span {
+    font-weight: 100;
+}
+.sec4 .box1 > div {
+    position: relative;
+}
+.sec4 .box1 > div a {
+    position: absolute;
+    right: -20px; top: 720px;
+    display: inline-block;
+    color:#000;
+    background: #fff;
+    text-align: center;
+    font-size: 50px;
+    width: 150px; height: 250px;
+}
 
+.sec4 .box2 {
+    position: relative;
+    transform: rotate(-90deg);
+}
+.sec4 .box2-1 {
+    position: absolute;
+    left: 80%; bottom: -232px;
+    height: 67vh; width: 30vw;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.sec4 .box2-1 .box2-1Bottom {
+    position: absolute;
+    left: 100px; top: 700px;
+}
+
+
+.sec4 .box2-2 {
+    position: absolute;
+    left: 80%; bottom: -663px;
+    height: 20vh; width: 32.5vw;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+}
+.sec4 .box2-2 {
+    height: 30vh;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 50px 0px 50px;
+    font-size: 1vw;
+}
+.sec4 .box2-2 > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.sec4 .box2-2 .menu a {
+    border: 2px solid #000;
+    height: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+}
