@@ -37,7 +37,7 @@
             <!-- logInCont -->
             <section id="logInCont">
                 <div class="logIn">
-                    <h1><strong>1rrock</strong> 사이트에 오신걸 환영합니다.</h1>
+                    <h1><strong>hong</strong> 사이트에 오신걸 환영합니다.</h1>
                     <form name="logIn" method="post" action="logInSave.php">
                         <fieldset>
                             <legend class="sr-only">로그인 영역입니다.</legend>
