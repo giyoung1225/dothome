@@ -16,23 +16,31 @@
     top: 0;
 }
 
+/* container */
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
 /* header */
 #header {
     position: fixed;
     left: 0; top: 0;
     z-index: 2000;
     width: 100%;
-    color: #fff;
+    color: #000;
     height: 82px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #2E2E30;
+    border-bottom: 1px solid #dad8d1;
+    background: #f0eeeb;
 }
-#header.black {
-    background: #000;
-}
+
 #header .site {
     flex: 1 1 30%;
 }
@@ -41,7 +49,7 @@
     text-transform: capitalize;
     display: block;
     padding-left: 40px;
-    border-right: 1px solid #2E2E30;
+    border-right: 1px solid #dad8d1;
     width: 175px;
     height: 82px;
     padding: 32px 27px 27px 60px;
@@ -56,7 +64,7 @@
     top: 36px;
     width: 30px;
     height: 1px;
-    background: #fff;
+    background: #000;
 }
 #header .site a::after {
     content: '';
@@ -65,7 +73,7 @@
     top: 46px;
     width: 30px;
     height: 1px;
-    background: #fff;
+    background: #000;
 }
 #header .logo {
     flex: 1 1 30%;
@@ -96,6 +104,22 @@
 }
 #header .nav li.active {
     text-decoration: underline;
+}
+
+#header.black {
+    background: #000;
+    border-bottom: 1px solid #2E2E30;
+    color: #fff;
+}
+
+#header.black .site a::before {
+    background: #fff;
+}
+#header.black .site a::after {
+    background: #fff;
+}
+#header.black .site a {
+    border-right: 1px solid #2E2E30;
 }
 
 
@@ -233,8 +257,46 @@
 }
 
 
+/* board */
+#boardCont {
+    min-height: 100vh;
+    background: #f0eeeb;
+}
 
+.writeBoard {
+    padding-top: 200px;
+}
+.writeBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
 
+.writeBoard label {
+    display: block;
+    font-size: 16px;
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 5px;
+}
+.writeBoard .title-text {
+    width: 100%;
+    background-color: transparent;
+    font-family: 'S-CoreDream-3Light';
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.writeBoard .writeBoardBtn {
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    padding: 10px 30px;
+    font-family: 'S-CoreDream-3Light';
+}
 
 
 
