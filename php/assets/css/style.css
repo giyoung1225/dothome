@@ -16,23 +16,31 @@
     top: 0;
 }
 
+/* container */
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
 /* header */
 #header {
     position: fixed;
     left: 0; top: 0;
     z-index: 2000;
     width: 100%;
-    color: #fff;
+    color: #000;
     height: 82px;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #2E2E30;
+    border-bottom: 1px solid #dad8d1;
+    background: #f0eeeb;
 }
-#header.black {
-    background: #000;
-}
+
 #header .site {
     flex: 1 1 30%;
 }
@@ -41,7 +49,7 @@
     text-transform: capitalize;
     display: block;
     padding-left: 40px;
-    border-right: 1px solid #2E2E30;
+    border-right: 1px solid #dad8d1;
     width: 175px;
     height: 82px;
     padding: 32px 27px 27px 60px;
@@ -56,7 +64,7 @@
     top: 36px;
     width: 30px;
     height: 1px;
-    background: #fff;
+    background: #000;
 }
 #header .site a::after {
     content: '';
@@ -65,7 +73,7 @@
     top: 46px;
     width: 30px;
     height: 1px;
-    background: #fff;
+    background: #000;
 }
 #header .logo {
     flex: 1 1 30%;
@@ -86,11 +94,32 @@
 #header .nav li {
     display: inline-block;
     padding-left: 5px;
+    font-size: 16px;
+    font-family: 'Rajdhani', 'Chosunilbo_myungjo';
 }
 #header .nav li a {
     display: block;
     font-size: 16px;
     font-family: 'Rajdhani', 'Chosunilbo_myungjo';
+}
+#header .nav li.active {
+    text-decoration: underline;
+}
+
+#header.black {
+    background: #000;
+    border-bottom: 1px solid #2E2E30;
+    color: #fff;
+}
+
+#header.black .site a::before {
+    background: #fff;
+}
+#header.black .site a::after {
+    background: #fff;
+}
+#header.black .site a {
+    border-right: 1px solid #2E2E30;
 }
 
 
@@ -111,7 +140,16 @@
     font-family: "Saol Display Regular";
 }
 
-
+/* errorAlert */
+.errorAlert {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 18px;
+    text-align: center;
+}
+.errorAlert  a {
+    display: block;
+    text-decoration: underline;
+}
 
 /* 회원가입 : signUp */
 #signUpCont {
@@ -124,10 +162,11 @@
     font-family: 'Chosunilbo_myungjo';
 }
 .signUp {
-    
+    width: 300px;
 }
 .signUp h1 {
     text-align: center;
+    font-size: 18px;
 }
 .signUp h1 strong {
     font-weight: normal;
@@ -162,15 +201,204 @@
     border: 1px solid #fff;
     padding: 10px;
 }
+.signUp .signUpBtn {
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+}
+.signUp .signDesc {
+    text-align: center;
+}
+.signUp .signDesc a {
+    text-decoration: underline;
+}
+
+/* 로그인 : logInCont */
+#logInCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Chosunilbo_myungjo';
+}
+.logIn {
+    width: 300px;
+}
+.logIn h1 {
+    text-align: center;
+    font-size: 18px;
+}
+.logIn h1 strong {
+    font-weight: normal;
+    display: block;
+}
+.logIn .input-text {
+    border: 1px solid #fff;
+    background: #000;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.logIn .logInBtn {
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+}
+.logIn .logInDesc {
+    text-align: center;
+}
+.logIn .logInDesc a {
+    text-decoration: underline;
+}
 
 
+/* board */
+#boardCont {
+    min-height: 100vh;
+    background: #f0eeeb;
+}
 
+.writeBoard {
+    padding-top: 200px;
+}
+.writeBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
 
+.writeBoard label {
+    display: block;
+    font-size: 16px;
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 5px;
+}
+.writeBoard .title-text {
+    width: 100%;
+    background-color: transparent;
+    font-family: 'S-CoreDream-3Light';
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
 
+.writeBoard .writeBoardBtn {
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    float: right;
+    padding: 10px 30px;
+    font-family: 'S-CoreDream-3Light';
+}
 
+.saveBoard {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.listBoard {
+    padding-top: 200px;
+    font-family: 'S-CoreDream-3Light';
+}
+.listBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.listSearch {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.listSearch .form-search {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: transparent;
+}
+.listSearch .form-select {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: transparent;
+}
+.listSearch .form-btn {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: transparent;
+}
+.listSearch .form-btn.black {
+    background: black;
+    color: #fff;
+}
+.listTable {
+    margin-top: 20px;
+}
+.listTable table {
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.listTable table td,
+.listTable table th {
+    border-top: 1px solid #000;
+    padding: 17px;
+    text-align: center;
+    font-size: 16px;
+}
+.listTable table th {
+    background: rgba(0,0,0,0.04);
+}
 
+.listPage {
 
+}
+.listPage .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+.listPage .pagination li.active a {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+.listPage .pagination li a {
+    display: block;
+    border: 1px solid #bebebe;
+    padding: 10px;
+    margin-left: -1px;
+}
+
+/* info */
+.info {
+    width: 400px;
+    border: 1px solid #dadbd1;
+    text-align: center;
+    padding: 60px 30px;
+}
+.info p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+}
+.info a {
+    font-size: 16px;
+    font-family: 'Chosunilbo_myungjo';
+    text-decoration: underline;
+}
 
 
 

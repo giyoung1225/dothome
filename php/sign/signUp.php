@@ -52,42 +52,52 @@
                        </div>
                        <div>
                             <label for="userEmail" class="sr-only">이름</label>
-                            <input type="email" name="userName" id="userName" class="input-text" placeholder="이름을 적어주세요." required>
+                            <input type="text" name="userName" id="userName" class="input-text" placeholder="이름을 적어주세요." required>
                        </div>
                        <div>
                             <label for="userEmail" class="sr-only">닉네임</label>
-                            <input type="email" name="userNickName" id="userNickName" class="input-text" placeholder="활동에 필요한 닉네임을 적어주세요." required>
+                            <input type="text" name="userNickName" id="userNickName" class="input-text" placeholder="활동에 필요한 닉네임을 적어주세요." required>
                        </div>
                        <div>
                             <label for="userEmail" class="sr-only">패스워드</label>
-                            <input type="email" name="userPW" id="userPW" class="input-text" placeholder="패스워드를 적어주세요." required>
+                            <input type="text" name="userPW" id="userPW" class="input-text" placeholder="패스워드를 적어주세요." required>
                        </div>
                        <div class="birth">
                            <div>
                                <label for="birthYear">년도</label>
                                <select name="birthYear" id="birthYear" required>
                                     <?php
-                                        $birthYear = date('Y',time())
+                                        $birthYear = date('Y',time());
+
+                                        for($i = $birthYear; $i >= 1930; $i--){
+                                            echo "<option value='{$i}'>{$i}</option>";
+                                        }
                                     ?>
                                </select>
                            </div>
                            <div>
                                <label for="birthMonth">월</label>
                                <select name="birthMonth" id="birthMonth" required>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <?php
+                                        for($i = 1; $i <= 12; $i++){
+                                            echo "<option value='{$i}'>{$i}</option>";
+                                        }
+                                    ?>
                                </select>
                            </div>
                            <div>
                                <label for="birthDay">일</label>
                                <select  name="birthDay" id="birthDay" required>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <?php
+                                        for($i = 1; $i <= 31; $i++){
+                                            echo "<option value='{$i}'>{$i}</option>";
+                                        }
+                                    ?>
                                </select>
                            </div>
                        </div>
+                       <button class="signUpBtn" type="submit" value="회원가입">회원가입</button>
+                       <p class="signDesc">로그인을 원하면? <a href="logIn.php">로그인</a></p>
                    </fieldset>
                </form>
            </div>
@@ -96,29 +106,4 @@
     </main>
 
 </body></html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

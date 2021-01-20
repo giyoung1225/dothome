@@ -111,8 +111,10 @@
 
 #section1 {
     position: absolute; left: 50%; top: 50%;
-    width: 100vw; height: 100vh; background: url(/port/img/portbg1_2.png);
-    transform: translate(-100%, -100%);
+    width: 100vw; height: 100vh; 
+    background: url(../img/portbg1_2.png);
+    background-size: 1000px;
+    transform: translate(-100%, -100%)
 }
 #section2 {
     position: absolute; left: 50%; top: 50%;
