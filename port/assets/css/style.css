@@ -807,6 +807,20 @@
     margin-left: 30px;
 }
 
+.sec1 .box1 > div {
+    position: relative;
+    text-align: center;
+}
+.sec1 .box1 > div a {
+    position: absolute;
+    right: 150px; top: 620px;
+    color:#fff;
+    background: #f11b1b;
+    padding-left: 0px;
+    font-size: 50px;
+    width: 170px; height: 250px;
+}
+
 
 
 
