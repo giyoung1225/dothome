@@ -638,10 +638,16 @@
     width: 100%;
     background: rgb(24, 24, 24);
 }
+#particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
 
 /* ciclebar */
 .circlebar {
     position: fixed;
+    z-index: 1000;
 }
 .mainBtn {
     position: fixed;
@@ -807,20 +813,6 @@
     margin-left: 30px;
 }
 
-.sec1 .box1 > div {
-    position: relative;
-    text-align: center;
-}
-.sec1 .box1 > div a {
-    position: absolute;
-    right: 150px; top: 620px;
-    color:#fff;
-    background: #f11b1b;
-    padding-left: 0px;
-    font-size: 50px;
-    width: 170px; height: 250px;
-}
-
 
 
 
@@ -836,11 +828,12 @@
     color: rgb(37, 176, 229);
 }
 .imgBox1 {
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 300px;
     position: relative;
     display: flex;
     flex-direction: row-reverse;
+    align-items: baseline;
 }
 
 .imgBox1.active img {
@@ -890,42 +883,79 @@
     width: 70%;
     opacity: 0.4;
 }
-.imgBox .right:nth-child(1) a {
-    top: 350px;
+.imgBox .right:nth-child(1) p {
+    top: 450px;
 }
-.imgBox .right a {
+.imgBox .right p {
     position: absolute;
     left: 250px;
     top: 250px;
 }
-.imgBox a {
+.imgBox p {
     color: rgb(37, 176, 229);
     font-size: 50px;
     text-transform: uppercase;
     opacity: 1;
 }
 .imgBox2 {
-    padding-bottom: 100px;
+    padding-bottom: 300px;
     position: relative;
+    display: flex;
+    align-items: baseline;
 }
-.imgBox .left a {
+.imgBox .left p {
     position: absolute;
     right: 250px;
     top: 250px;
 }
 .imgBox3 {
-    padding-bottom: 100px;
+    padding-bottom: 300px;
     position: relative;
     display: flex;
     flex-direction: row-reverse;
+    align-items: baseline;
 }
 .imgBox4 {
-    padding-bottom: 100px;
+    padding-bottom: 300px;
     position: relative;
+    display: flex;
+    align-items: baseline;
 }
+.imgBox .left a {
+    font-size: 25px;
+    color: #25b0e5;
+    border: 1px solid #25b0e5;
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 5px;
+    transform: translateY(-60px) translateX(-330px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.imgBox .left a:hover {
+    box-shadow: inset 0 0 0 2rem #25b0e5;
+    color: #fff;
+}
+.imgBox .right a:hover {
+    box-shadow: inset 0 0 0 2rem #25b0e5;
+    color: #fff;
+}
+
+.imgBox .right a {
+    font-size: 25px;
+    color: #25b0e5;
+    border: 1px solid #25b0e5;
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: 5px;
+    transform: translateY(-60px) translateX(330px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
 /* siteHover */
 .imgs:hover img {opacity: 1;}
-.imgs:hover.right a {
+.imgs:hover.right p {
     opacity: 0;
     animation: hover1 2s ease-in-out 1;
 }
@@ -933,7 +963,7 @@
     0% {opacity: 1; transform: translateX(0);}
     100% {opacity: 0; transform: translateX(50px);}
 }
-.imgs:hover.left a {
+.imgs:hover.left p {
     opacity: 0;
     animation: hover2 2s ease-in-out 1;
 }
@@ -941,32 +971,46 @@
     0% {opacity: 1; transform: translateX(0);}
     100% {opacity: 0; transform: translateX(-50px);}
 }
+.imgs:hover.right a {
+    opacity: 1;
+}
+.imgs:hover.left a {
+    opacity: 1;
+}
 
 /* 애니영역 */
-.aniCont {height: 100vh;}
+#content3 .container {width: 100%;}
+.aniCont {
+    width: 100%;
+    display: flex;
+    flex: 1 1 40%;
+}
 .aniCont .title {
-    width: 5px;
+    display: inline-block;
+    width: 30px;
     font-size: 50px;
     line-height: 1.1;
     padding-top: 250px;
+    padding-left: 400px;
 }
 .aniCont .title span {
     color: rgb(37, 176, 229);
 }
 .aniBox {
+    display: inline-block;
     display: flex;
-    align-items: center;
-    margin-left: 280px;
     justify-content: flex-end;
     width: 100%;
+    height: 100vh;
+    flex: 1 1 70%;
 }
 .aniBox .cont {
-    height: 65vh;
-    width: 250px;
+    width: 300px;
     position: relative;
     text-align: center;
+    border-left: 1px solid rgb(24, 24, 24);
 }
-.aniBox .cont::before {
+/* .aniBox .cont::before {
     content: "";
     width: 1px;
     height: 100vh;
@@ -974,9 +1018,10 @@
     left: 0px;
     top: -530px;
     background: rgb(24, 24, 24);
-}
+} */
 .aniBox .cont img {
     width: 30px;
+    padding-top: 50vh;
 }
 .aniBox .cont a {
     display: block;
