@@ -43,6 +43,7 @@
 
         <div id="contents">
             <div id="content1">
+                <div id="particles-js"></div>
                 <div class="container">
                     <div class="about">
                         <p class="title"><span>I</span>  
@@ -82,19 +83,27 @@
                         <div class="imgBox">
                             <div id="imgBox1" class="imgBox1 right imgs">
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/webstandard.png" alt="이미지1">
-                                <a href="#">webstandard<span> site</span></a>
+                                <p>webstandard site</p>
+                                <a href="#">Code View<span></span></a>
+                                <a href="#">Site View<span></span></a>
                             </div>
                             <div id="imgBox2" class="imgBox2 left imgs">
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/responsive.png" alt="이미지1">
-                                <a href="#">responsive<span> site</span></a>
+                                <p>responsive site</p>
+                                <a href="#">Code View<span></span></a>
+                                <a href="#">Site View<span></span></a>
                             </div>
                             <div id="imgBox3" class="imgBox3 right imgs">
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/megabox.png" alt="이미지1">
-                                <a href="#">megabox<span> site</span></a>
+                                <p>megabox site</p>
+                                <a href="#">Code View<span></span></a>
+                                <a href="#">Site View<span></span></a>
                             </div>
                             <div id="imgBox4" class="imgBox4 left imgs">
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/react.png" alt="이미지1">
-                                <a href="#">react<span> site</span></a>
+                                <p>react site</p>
+                                <a href="#">Code View<span></span></a>
+                                <a href="#">Site View<span></span></a>
                             </div>
                         </div>
                     </div>
@@ -241,6 +250,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         //skrollr 
         var s = skrollr.init({
@@ -325,6 +335,114 @@
         });
         
 
+        /* ---- particles.js config ---- */
+        particlesJS("particles-js", {
+        particles: {
+            number: {
+            value: 80,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+            },
+            color: {
+            value: ["#25b0e5"]
+            },
+            shape: {
+            type: ["circle"],
+            stroke: {
+                width: 0,
+                color: "#fff"
+            },
+            polygon: {
+                nb_sides: 5
+            },
+            },
+            opacity: {
+            value: 0.7,
+            random: false,
+            anim: {
+                enable: false,
+                speed: 0.3,
+                opacity_min: 0.1,
+                sync: false
+            }
+            },
+            size: {
+            value: 3,
+            random: true,
+            anim: {
+                enable: false,
+                speed: 10,
+                size_min: 10,
+                sync: false
+            }
+            },
+            line_linked: {
+            enable: true,
+            distance: 40,
+            color: "#808080",
+            opacity: 0.4,
+            width: 1
+            },
+            move: {
+            enable: true,
+            speed: 5,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200
+            }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+            onhover: {
+                enable: true,
+                mode: "grab"
+            },
+            onclick: {
+                enable: true,
+                mode: "push"
+            },
+            resize: true
+            },
+            modes: {
+            grab: {
+                distance: 140,
+                line_linked: {
+                opacity: 1
+                }
+            },
+            bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3
+            },
+            repulse: {
+                distance: 200,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 4
+            },
+            remove: {
+                particles_nb: 2
+            }
+            }
+        },
+        retina_detect: true
+        });
+
+       
        
     </script>
 </body>

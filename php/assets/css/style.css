@@ -256,6 +256,47 @@
     text-decoration: underline;
 }
 
+/* 로그인 : logInCont */
+#logInCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Chosunilbo_myungjo';
+}
+.logIn {
+    width: 300px;
+}
+.logIn h1 {
+    text-align: center;
+    font-size: 18px;
+}
+.logIn h1 strong {
+    font-weight: normal;
+    display: block;
+}
+.logIn .input-text {
+    border: 1px solid #fff;
+    background: #000;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.logIn .logInBtn {
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+}
+.logIn .logInDesc {
+    text-align: center;
+}
+.logIn .logInDesc a {
+    text-decoration: underline;
+}
 
 /* board */
 #boardCont {
