@@ -122,22 +122,27 @@
                         </p>
                         <div class="aniBox">
                             <div class="box1 cont">
+                                <iframe src="https://giyoung1225.github.io/dothome/port/assets/ports/animation1.html" frameborder="0" width="100%" height="100%"></iframe>
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/heart.png" alt="이미지2">
                                 <a href="#">HEART</a>
                             </div>
                             <div class="box2 cont">
+                                <iframe src="https://giyoung1225.github.io/dothome/port/assets/ports/animation2.html" frameborder="0" width="100%" height="100%"></iframe>
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/rocket.png" alt="이미지2">
                                 <a href="#">ROCKET</a>
                             </div>
                             <div class="box3 cont">
+                                <iframe src="https://giyoung1225.github.io/dothome/port/assets/ports/animation3.html" frameborder="0" width="100%" height="100%"></iframe>
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/street-sign.png" alt="이미지2">
                                 <a href="#">GSAP</a>
                             </div>
                             <div class="box4 cont">
+                                <iframe src="https://giyoung1225.github.io/dothome/port/assets/ports/animation4.html" frameborder="0" width="100%" height="100%"></iframe>
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/cube.png" alt="이미지2">
                                 <a href="#">CUBE</a>
                             </div>
                             <div class="box5 cont">
+                                <iframe src="https://giyoung1225.github.io/dothome/port/assets/ports/animation5.html" frameborder="0" width="100%" height="100%"></iframe>
                                 <img src="http://hgy5710.dothome.co.kr/port/assets/img/tacle.png" alt="이미지2">
                                 <a href="#">TENTACLE</a>
                             </div>
@@ -440,6 +445,20 @@
             }
         },
         retina_detect: true
+        });
+
+        //ani영역
+        let aniBox = document.querySelector(".aniBox .box1");
+        let aniTitle = document.querySelector(".aniCont .title");
+
+
+        aniBox.forEach(elem => {
+            elem.addEventListener("mouseenter", () => {
+                aniTitle.classList.add("active");
+            });
+            elem.addEventListener("mouseleave", () => {
+                aniTitle.classList.remove("active");
+            });
         });
 
        
