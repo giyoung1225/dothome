@@ -165,44 +165,45 @@
                             <div class="contBox1">
                                 <div class="script script1">
                                     <div>
-                                        <p>Parallax</p>
-                                        <a href="#">Javascript </a>/<a href="#"> jQuery</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/parallax01-jquery.html" target="_blink">
+                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script1.png" alt="이미지3">
+                                        </a>
                                     </div>
-                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script1.png" alt="이미지3">
                                 </div>
                                 <div class="script script2">
                                     <div>
-                                        <p>MouseEffect</p>
-                                        <a href="#">Javascript </a>/<a href="#"> jQuery</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/mouseEffect01-jquery.html" target="_blink">
+                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script2.png" alt="이미지3">
+                                        </a>
                                     </div>
-                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script2.png" alt="이미지3">
                                 </div>
                                 <div class="script script3">
                                     <div>
-                                        <p>SliderEffect</p>
-                                        <a href="#">Javascript </a>/<a href="#"> jQuery</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/sliderEffect01-jquery.html" target="_blink">
+                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script3.png" alt="이미지3">
+                                        </a>
                                     </div>
-                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script3.png" alt="이미지3">
                                 </div>
-                            </div>
-                            <div class="contBox2">
                                 <div class="script script4">
                                     <div>
-                                        <a href="#">vertical_1</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-vertical.html" target="_blink">
+                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script4.png" alt="이미지3">
+                                        </a>
                                     </div>
-                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script4.png" alt="이미지3">
                                 </div>
                                 <div class="script script5">
                                     <div>
-                                        <a href="#">vertical_2</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-vertical2.html" target="_blink">
+                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script5.png" alt="이미지3">
+                                        </a>
                                     </div>
-                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script5.png" alt="이미지3">
                                 </div>
                                 <div class="script script6">
                                     <div>
-                                        <a href="#">appleSite</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-apple.html" target="_blink">
+                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script6.png" alt="이미지3">
+                                        </a>
                                     </div>
-                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script6.png" alt="이미지3">
                                 </div>
                             </div>
                         </div>
@@ -295,7 +296,7 @@
 
         //각영역 도달했을 때, 애니메이션
         window.addEventListener("scroll", function(){
-            let pageYOffset = window.pageYOffset + screen.height/2;
+            let pageYOffset = window.pageYOffset + screen.height;
 
             let aboutYOffset = document.getElementById("content1").offsetTop;
             let about = document.querySelector(".about");
@@ -448,20 +449,17 @@
         });
 
         //ani영역
-        let aniBox = document.querySelector(".aniBox .box1");
-        let aniTitle = document.querySelector(".aniCont .title");
+        const aniBox = document.querySelector(".aniBox");
+        const aniTitle = document.querySelector(".aniCont .title");
 
-
-        aniBox.forEach(elem => {
-            elem.addEventListener("mouseenter", () => {
-                aniTitle.classList.add("active");
-            });
-            elem.addEventListener("mouseleave", () => {
-                aniTitle.classList.remove("active");
-            });
+        aniBox.addEventListener("mouseenter", () => {
+            aniTitle.classList.add("active");
         });
-
-       
+        aniBox.addEventListener("mouseleave", () => {
+            aniTitle.classList.remove("active");
+        });
+        
+     
        
     </script>
 </body>
