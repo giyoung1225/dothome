@@ -1,3 +1,10 @@
+<?php
+    include '../connect/connect.php';
+    include '../connect/session.php';
+    include '../connect/checkSession.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -48,12 +55,11 @@
                             <legend class="sr-only">게시판 작성 영역입니다.</legend>
                             <div>
                                 <label for="boadTitle">제목</label>
-                                <input type="text" name="boadTitle" id="boardTitle" class="title-text" required autofocus>
+                                <input type="text" name="boadTitle" id="boardTitle" class="title-text" required autofocus placeholder="제목을 작성해주세요!" />
                             </div>
                             <div>
-                                <label for="boadTitle">내용</label>
-                                <textarea name="boadCont" id="boadCont" class="title-text" rows="13" required>
-                                </textarea>
+                                <label for="boadCont">내용</label>
+                                <textarea name="boadCont" id="boadCont" class="title-text" rows="13" required placeholder="내용을 작성해주세요!"></textarea>
                             </div>
                         </fieldset>
                         <button class="writeBoardBtn" type="submit" value="저장하기">저장하기</button>

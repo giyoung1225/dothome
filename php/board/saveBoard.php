@@ -67,6 +67,12 @@
                         $sql = "INSERT INTO myBoard(memberID, boaedTitle, boardContent, regTime) ";
                         $sql .= "VALUES('{$memberID}', '{$boardTitle}', '{$boardContent}', '{$regTime}',)";
                         $result = $dbConnect -> query($sql);
+
+                        if($result){
+                            echo "<div class='info'><p>저장이 완료되었습니다.</p><a href='board.php'>게시판 목록 이동하기</a></div>";
+                        } else {
+                            echo "<div class='info'><p>저장이 실패되었습니다.</p><a href='writeBoard.php'>게시판 작성하기</a></div>";
+                        }
                     ?>
                 </div>
             </div>

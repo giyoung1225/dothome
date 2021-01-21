@@ -298,7 +298,125 @@
     font-family: 'S-CoreDream-3Light';
 }
 
+.saveBoard {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.listBoard {
+    padding-top: 200px;
+    font-family: 'S-CoreDream-3Light';
+}
+.listBoard h2 {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.listSearch {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.listSearch .form-search {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: transparent;
+}
+.listSearch .form-select {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: transparent;
+}
+.listSearch .form-btn {
+    border: 1px solid #000;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background: transparent;
+}
+.listSearch .form-btn.black {
+    background: black;
+    color: #fff;
+}
+.listTable {
+    margin-top: 20px;
+}
+.listTable table {
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+.listTable table td,
+.listTable table th {
+    border-top: 1px solid #000;
+    text-align: center;
+    font-size: 16px;
+}
+.listTable table td.left {
+    text-align: left;
+    padding-left: 15px;
+}
+.listTable table td {
+    padding: 17px 0;
+}
+.listTable table td a {
+    display: block;
+}
+.listTable table th {
+    background: rgba(0,0,0,0.04);
+    padding: 17px 0;
+}
+.listTable table tr {
+    transition: all 0.2s;
+}
+.listTable table tr.contents {
+    height: 30vh;
+}
+.listTable table tr:hover {
+    background: rgba(0,0,0,0.1);
+}
+.listPage {
+
+}
+.listPage .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+.listPage .pagination li.active a {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+}
+.listPage .pagination li a {
+    display: block;
+    border: 1px solid #bebebe;
+    padding: 10px;
+    margin-left: -1px;
+}
+
+/* info */
+.info {
+    width: 400px;
+    border: 1px solid #dadbd1;
+    text-align: center;
+    padding: 60px 30px;
+}
+.info p {
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 30px;
+}
+.info a {
+    font-size: 16px;
+    font-family: 'Chosunilbo_myungjo';
+    text-decoration: underline;
+}
 
 
 
