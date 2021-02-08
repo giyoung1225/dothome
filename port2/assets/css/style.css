@@ -11,7 +11,7 @@
 body {
     background: linear-gradient(to right, #B5BEFB 0%, #FCB5C5 100%);
     background-size: 200% auto;
-    animation: bg 15s linear infinite;
+    animation: bg 10s linear infinite;
 }
 @keyframes bg {
     0% {background-position-x: 0;}
