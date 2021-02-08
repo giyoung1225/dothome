@@ -11,8 +11,22 @@
 </head>
 <body>
 
+    <div class="progress">
+        <div class="loadingBox">
+            <div class="bar">
+                <div class="loadBox"></div>
+                <p class="loadTxt">Loading</p>
+            </div>
+        </div>
+        <span class="progress-text">0</span>
+    </div>
+    <!-- //progerss -->
+
     <div id="wrap">
-        <div id="header">
+        <div id="header"
+        data-0="top: 0%;"
+        data-500="top: -50%;"
+        data-1000="top: -110%;">
             <div class="container">
                 <div class="header">
                     <p class="split">FRONT
@@ -42,7 +56,10 @@
 
 
         <div id="contents">
-            <div id="content1">
+            <div id="content1"
+            data-1000="top: 0%;"
+            data-1500="top: -50%;"
+            data-2000="top: -110%;">
                 <div id="particles-js"></div>
                 <div class="container">
                     <div class="about">
@@ -71,7 +88,9 @@
             </div>
 
             <!-- //content1 -->
-            <div id="content2">
+            <div id="content2"
+            data-2000="top: 0%;"
+            data-9000="top: -450%;">
                 <div class="container">
                     <div class="siteCont">
                         <p class="title">The 
@@ -111,7 +130,10 @@
             </div>
             <!-- //content2 -->
 
-            <div id="content3">
+            <div id="content3"
+            data-9000="top: 0%;"
+            data-9500="top: -50%;"
+            data-10000="top: -110%;">
                 <div class="container">
                     <div class="aniCont">
                         <p class="title">The 
@@ -152,7 +174,10 @@
             </div>
             <!-- //content3 -->
 
-            <div id="content4">
+            <div id="content4"
+            data-10000="top: 0%;"
+            data-11000="top: -50%;"
+            data-13000="top: -110%;">
                 <div class="container">
                     <div class="scriptCont">
                         <p class="title">The 
@@ -162,50 +187,28 @@
                             on
                         </p>
                         <div class="contWrap">
-                            <div class="contBox1">
-                                <div class="script script1">
+                            <ul class="script">
+                                    <!-- <img data-scroll data-scroll-speed="2" data-scroll-direction="horizontal" class="content__img content__img--tiny is-inview" src="http://hgy5710.dothome.co.kr/port/assets/img/script1.png" alt="이미지3" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -93.7094, 0, 0, 1);">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script2.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script3.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script4.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script5.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script6.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script7.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script8.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script9.png" alt="이미지3">
+                                    <img src="http://hgy5710.dothome.co.kr/port/assets/img/script10.png" alt="이미지3">
+
                                     <div>
-                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/parallax01-jquery.html" target="_blink">
-                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script1.png" alt="이미지3">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="script script2">
-                                    <div>
-                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/mouseEffect01-jquery.html" target="_blink">
-                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script2.png" alt="이미지3">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="script script3">
-                                    <div>
-                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/sliderEffect01-jquery.html" target="_blink">
-                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script3.png" alt="이미지3">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="script script4">
-                                    <div>
-                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-vertical.html" target="_blink">
-                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script4.png" alt="이미지3">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="script script5">
-                                    <div>
-                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-vertical2.html" target="_blink">
-                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script5.png" alt="이미지3">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="script script6">
-                                    <div>
-                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-apple.html" target="_blink">
-                                            <img src="http://hgy5710.dothome.co.kr/port/assets/img/script6.png" alt="이미지3">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/parallax01-jquery.html" target="_blink">parallaxSite</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/mouseEffect01-jquery.html" target="_blink">mouseEffect</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/portfolio/sliderEffect01-jquery.html" target="_blink">sliderEffect</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-vertical.html" target="_blink">verticalSite</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-vertical2.html" target="_blink">verticalSite2</a>
+                                        <a href="http://hgy5710.dothome.co.kr/effect/parallax-apple.html" target="_blink">appleSite</a>
+                                    </div> -->
+                            </ul>
+                            <div class="img-container"></div>
                         </div>
                         
                     </div>
@@ -257,6 +260,9 @@
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://tympanus.net/Development/OnScrollLetterAnimations/index5.c9dc3934.js"></script>
+    <script src="http://flairgale.cafe24.com/para/js/imagesloaded.pkgd.min.js"></script>
+
     <script>
         //skrollr 
         var s = skrollr.init({
@@ -286,7 +292,7 @@
 
         //header 글씨 쪼개기
         let text = document.querySelector(".split"),
-            splitText = text.innerText,
+            splitText = text.innerText;
             splitWrap = splitText.split("").join("</span><span aria-hidden: 'true'>");
             splitWrap = "<span aria-hidden: 'true'>" + splitWrap + "</span>";
         
@@ -460,7 +466,147 @@
         });
         
      
-       
+        //script
+        console.clear();
+
+        let sites = [
+            {
+                'title': 'parallaxsite',
+                'slogan': 'jquery/javascript',
+                'url': 'https://google.com',
+                'image': 'http://hgy5710.dothome.co.kr/port/assets/img/script1.png',
+            }, {
+                'title': 'mouseEffect',
+                'slogan': 'jquery/javascript',
+                'url': 'https://google.com',
+                'image': 'http://hgy5710.dothome.co.kr/port/assets/img/script2.png',
+            }, {
+                'title': 'sliderEffect',
+                'slogan': 'jquery/javascript',
+                'url': 'https://google.com',
+                'image': 'http://hgy5710.dothome.co.kr/port/assets/img/script3.png',
+            }, {
+                'title': 'verticalSite',
+                'slogan': '',
+                'url': 'https://google.com',
+                'image': 'http://hgy5710.dothome.co.kr/port/assets/img/script4.png',
+            }, {
+                'title': 'verticalSite2',
+                'slogan': '',
+                'url': 'https://google.com',
+                'image': 'http://hgy5710.dothome.co.kr/port/assets/img/script5.png',
+            }, {
+                'title': 'appleSite',
+                'slogan': '',
+                'url': 'https://google.com',
+                'image': 'http://hgy5710.dothome.co.kr/port/assets/img/script6.png',
+            },
+        ];
+
+
+        const script = document.querySelectorAll('.script')[0];
+        const imageContainer = document.querySelectorAll('.img-container')[0];
+
+
+        sites.forEach(site => {
+            let dataId = site.title.toLowerCase().replace(/￦s/g, '-').replace(/'/g, '').replace(/"/g, '').replace(/</g, '').replace(/>/g, '');
+            
+            const listEl = $(`<li data-id="${dataId}">
+                                                    <a href="${site.url}">${site.title}</a>
+                                                    <span class="slogan">${site.slogan}</span>
+                                                </li>`);
+            
+            const imgEl = $(`<div class="image" data-id="${dataId}">
+                                                    <img src="${site.image}" alt="${site.title} image">
+                                            </div>`);
+            
+            $(script).append(listEl);
+            $(imageContainer).append(imgEl);
+            
+            $(listEl).on('mouseover', function() {
+                $('.img-container .image').removeClass('visible');
+                $(this).addClass('hovered');
+                $(imgEl).addClass('visible');
+                
+            }).on('mousemove', function(e) {
+                let imgWidth = $(imgEl).outerWidth();
+                let imgHeight = $(imgEl).outerHeight();
+                TweenMax.to(imageContainer, .5, {
+                    left: e.clientX - (imgWidth / 2),
+                    top: e.clientY - (imgHeight / 2)
+                });
+                
+            }).on('mouseleave', function() {
+                $(this).removeClass('hovered');
+            });
+        });
+
+
+        $(script).on('mouseover', function() {
+            $(imageContainer).addClass('visible');
+        }).on('mouseleave', function() {
+            $(imageContainer).removeClass('visible');
+        });
+
+
+        $('.script li:nth-child(3)').addClass('active');
+        $('a').on('click', function(e) {e.preventDefault()});
+
+
+
+
+        // let pageYOffset = window.pageYOffset
+
+        // const scroll = () => {
+        //     const newPageYOffset = document.querySelector(".scriptCont").pageYOffset;
+        //     const different = newPageYOffset - pageYOffset;
+        //     const scriptText = document.querySelectorAll(".script img");
+
+        //     gsap.set(".script div a", {skewY: different*0.009, ease: Power1.out});
+        //     requestAnimationFrame(scroll);
+
+        // }
+        // scroll();
+
+        //loading
+        function loading() {
+            let $progress = $(".progress"),
+                $progressText = $(".progress-text");
+
+            let imgLoad = imagesLoaded("body"),
+                imgTotal = imgLoad.images.length,
+                imgLoaded = 0,
+                imgCurrent = 0,
+                progressTimer = setInterval(updateProgress, 1000/60);
+
+            imgLoad.on("progress", function () {
+                imgLoaded++;
+            });
+
+            function updateProgress(){
+                let target = ( imgLoaded/imgTotal ) * 100;
+                imgCurrent += (target - imgCurrent) * 0.1;
+                $progressText.text( parseInt(imgCurrent) );
+
+                if( imgCurrent >= 100 ){
+                    clearInterval(progressTimer);
+                    $("body").addClass("active");
+                    gsap.to($progress, {
+                        duration: 1, 
+                        top: "-110%",
+                        ease: "power4.out"
+                    });
+                    //메인 애니메이션
+                    let tl = gasp.timeline();
+                }
+
+                if( imgCurrent > 99 ){
+                    imgCurrent = 100;
+                }
+            }
+        }
+        
+        loading();
     </script>
 </body>
 </html>
