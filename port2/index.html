@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <div class="progress">
+        <div class="loadingBox">
+            <div class="bar">
+                <div class="loadBox"></div>
+                <p class="loadTxt">Loading</p>
+            </div>
+        </div>
+        <!-- <span class="progress-text">0</span> -->
+    </div>
+    <!-- //progerss -->
+
+
     <div id="wrap">
         <div id="header">
             <div class="header">
@@ -274,6 +286,46 @@
                 });
             }
         });
+
+        //loading
+        function loading() {
+            let $progress = $(".progress"),
+                $progressText = $(".progress-text");
+
+            let imgLoad = imagesLoaded("body"),
+                imgTotal = imgLoad.images.length,
+                imgLoaded = 0,
+                imgCurrent = 0,
+                progressTimer = setInterval(updateProgress, 1000/60);
+
+            imgLoad.on("progress", function () {
+                imgLoaded++;
+            });
+
+            function updateProgress(){
+                let target = ( imgLoaded/imgTotal ) * 100;
+                imgCurrent += (target - imgCurrent) * 0.1;
+                $progressText.text( parseInt(imgCurrent) );
+
+                if( imgCurrent >= 100 ){
+                    clearInterval(progressTimer);
+                    $("body").addClass("active");
+                    gsap.to($progress, {
+                        duration: 1, 
+                        top: "-110%",
+                        ease: "power4.out"
+                    });
+                    //메인 애니메이션
+                    let tl = gasp.timeline();
+                }
+
+                if( imgCurrent > 99 ){
+                    imgCurrent = 100;
+                }
+            }
+        }
+        
+        loading();
     </script>
 </body>
 </html>
