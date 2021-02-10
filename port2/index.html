@@ -10,15 +10,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="progress">
+
+
+    <!-- <div class="progress">
         <div class="loadingBox">
             <div class="bar">
                 <div class="loadBox"></div>
                 <p class="loadTxt">Loading</p>
             </div>
         </div>
-        <!-- <span class="progress-text">0</span> -->
-    </div>
+        <span class="progress-text">0</span>
+    </div> -->
     <!-- //progerss -->
 
 
@@ -191,9 +193,9 @@
     <script src="assets/js/jquery.min_1.12.4.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://tympanus.net/Development/OnScrollLetterAnimations/index5.c9dc3934.js"></script>
+    <!-- <script src="https://tympanus.net/Development/OnScrollLetterAnimations/index5.c9dc3934.js"></script> -->
     <script src="http://flairgale.cafe24.com/para/js/imagesloaded.pkgd.min.js"></script>
-    
+
     <script>
          //skrollr 
          var s = skrollr.init({
@@ -288,44 +290,44 @@
         });
 
         //loading
-        function loading() {
-            let $progress = $(".progress"),
-                $progressText = $(".progress-text");
+        // function loading() {
+        //     let $progress = $(".progress"),
+        //         $progressText = $(".progress-text");
 
-            let imgLoad = imagesLoaded("body"),
-                imgTotal = imgLoad.images.length,
-                imgLoaded = 0,
-                imgCurrent = 0,
-                progressTimer = setInterval(updateProgress, 1000/60);
+        //     let imgLoad = imagesLoaded("body"),
+        //         imgTotal = imgLoad.images.length,
+        //         imgLoaded = 0,
+        //         imgCurrent = 0,
+        //         progressTimer = setInterval(updateProgress, 1000/60);
 
-            imgLoad.on("progress", function () {
-                imgLoaded++;
-            });
+        //     imgLoad.on("progress", function () {
+        //         imgLoaded++;
+        //     });
 
-            function updateProgress(){
-                let target = ( imgLoaded/imgTotal ) * 100;
-                imgCurrent += (target - imgCurrent) * 0.1;
-                $progressText.text( parseInt(imgCurrent) );
+        //     function updateProgress(){
+        //         let target = ( imgLoaded/imgTotal ) * 100;
+        //         imgCurrent += (target - imgCurrent) * 0.1;
+        //         $progressText.text( parseInt(imgCurrent) );
 
-                if( imgCurrent >= 100 ){
-                    clearInterval(progressTimer);
-                    $("body").addClass("active");
-                    gsap.to($progress, {
-                        duration: 1, 
-                        top: "-110%",
-                        ease: "power4.out"
-                    });
-                    //메인 애니메이션
-                    let tl = gasp.timeline();
-                }
+        //         if( imgCurrent >= 100 ){
+        //             clearInterval(progressTimer);
+        //             $("body").addClass("active");
+        //             gsap.to($progress, {
+        //                 duration: 1, 
+        //                 top: "-110%",
+        //                 ease: "power4.out"
+        //             });
+        //             //메인 애니메이션
+        //             let tl = gasp.timeline();
+        //         }
 
-                if( imgCurrent > 99 ){
-                    imgCurrent = 100;
-                }
-            }
-        }
+        //         if( imgCurrent > 99 ){
+        //             imgCurrent = 100;
+        //         }
+        //     }
+        // }
         
-        loading();
+        // loading();
     </script>
 </body>
 </html>
