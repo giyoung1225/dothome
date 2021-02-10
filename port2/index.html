@@ -40,11 +40,65 @@
 
         <div id="about">
             <div class="container">
-                <div class="wordBox">
-                    <div class="wordTxt split">port</div>
-                    <div class="wordTxt split">port</div>
-                    <div class="wordTxt split">port</div>
-                    <div class="wordTxt split">port</div>
+                <div class="about">
+                    <div class="wordBox">
+                        <div class="wordTxt split">port</div>
+                        <div class="wordTxt split2">port</div>
+                        <div class="wordTxt split3">port</div>
+                        <div class="wordTxt split4">port</div>
+                    </div>
+                    <div class="about_obj">
+                        <div class="object">
+                            <div class="planet1">
+                                <div class="shap">
+                                    <div class="wrap">
+                                        <div class="shap1 shap1_1"></div>
+                                        <div class="shap1 shap1_2">
+                                            <div class="field satellite">
+                                                <div class="planet"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="planet2">
+                                <div class="shap">
+                                    <div class="wrap">
+                                        <div class="shap2 shap2_1"></div>
+                                        <div class="shap2 shap2_2">
+                                            <div class="field satellite">
+                                                <div class="planet"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="planet3">
+                                <div class="shap">
+                                    <div class="wrap">
+                                        <div class="shap3 shap3_1"></div>
+                                        <div class="shap3 shap3_2">
+                                            <div class="field satellite">
+                                                <div class="planet"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="planet4">
+                                <div class="shap">
+                                    <div class="wrap">
+                                        <div class="shap3 shap4_1"></div>
+                                        <div class="shap3 shap4_2">
+                                            <div class="field satellite">
+                                                <div class="planet"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -142,8 +196,32 @@
         
         text.setAttribute("aria-label", splitText);
 
-        //bg 움직이기
+        let text2 = document.querySelector(".split2"),
+            splitText2 = text2.innerText;
+            splitWrap2 = splitText2.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap2 = "<span aria-hidden: 'true'>" + splitWrap2 + "</span>";
         
+            text2.innerHTML = splitWrap;
+        
+        text2.setAttribute("aria-label", splitText);
+
+        let text3 = document.querySelector(".split3"),
+            splitText3 = text3.innerText;
+            splitWrap3 = splitText3.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap3 = "<span aria-hidden: 'true'>" + splitWrap3 + "</span>";
+        
+            text3.innerHTML = splitWrap;
+        
+        text3.setAttribute("aria-label", splitText);
+
+        let text4 = document.querySelector(".split4"),
+            splitText4 = text4.innerText;
+            splitWrap4 = splitText4.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap4 = "<span aria-hidden: 'true'>" + splitWrap4 + "</span>";
+        
+            text4.innerHTML = splitWrap;
+        
+        text4.setAttribute("aria-label", splitText);
         
     </script>
 </body>
