@@ -43,15 +43,19 @@
                 <div class="about">
                     <div class="wordBox">
                         <div class="wordTxt split">port</div>
+                        <div class="mask txtMask1"></div>
                         <div class="wordTxt split2">port</div>
+                        <div class="mask txtMask2"></div>
                         <div class="wordTxt split3">port</div>
+                        <div class="mask txtMask3"></div>
                         <div class="wordTxt split4">port</div>
+                        <div class="mask txtMask4"></div>
                     </div>
                     <div class="about_obj">
                         <div class="object">
                             <div class="planet1">
                                 <div class="shap">
-                                    <div class="wrap">
+                                    <div class="wrap wrap_ani1">
                                         <div class="shap1 shap1_1"></div>
                                         <div class="shap1 shap1_2">
                                             <div class="field satellite">
@@ -63,7 +67,7 @@
                             </div>
                             <div class="planet2">
                                 <div class="shap">
-                                    <div class="wrap">
+                                    <div class="wrap wrap_ani2">
                                         <div class="shap2 shap2_1"></div>
                                         <div class="shap2 shap2_2">
                                             <div class="field satellite">
@@ -75,7 +79,7 @@
                             </div>
                             <div class="planet3">
                                 <div class="shap">
-                                    <div class="wrap">
+                                    <div class="wrap wrap_ani3">
                                         <div class="shap3 shap3_1"></div>
                                         <div class="shap3 shap3_2">
                                             <div class="field satellite">
@@ -87,7 +91,7 @@
                             </div>
                             <div class="planet4">
                                 <div class="shap">
-                                    <div class="wrap">
+                                    <div class="wrap wrap_ani4">
                                         <div class="shap3 shap4_1"></div>
                                         <div class="shap3 shap4_2">
                                             <div class="field satellite">
@@ -222,7 +226,54 @@
             text4.innerHTML = splitWrap;
         
         text4.setAttribute("aria-label", splitText);
-        
+        //header영역 애니메이션
+        window.addEventListener("scroll", ()=>{
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+            if(pageYOffset > document.getElementById("header").offsetTop){
+                document.querySelector(".icon").classList.add("show");
+                document.querySelector(".menu").classList.add("show");
+                document.querySelector(".topBtn").classList.add("show");
+            }
+        });
+
+
+        //about영역 애니메이션
+        window.addEventListener("scroll", ()=>{
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+            if(pageYOffset > document.getElementById("about").offsetTop){
+                document.querySelector(".txtMask1").classList.add("show");
+                document.querySelector(".txtMask2").classList.add("show");
+                document.querySelector(".txtMask3").classList.add("show");
+                document.querySelector(".txtMask4").classList.add("show");
+                document.querySelector(".split span:nth-child(2)").classList.add("show");
+                document.querySelector(".split2 span:nth-child(2)").classList.add("show");
+                document.querySelector(".split3 span:nth-child(2)").classList.add("show");
+                document.querySelector(".split4 span:nth-child(2)").classList.add("show");
+                document.querySelector(".wrap_ani1").classList.add("show");
+                document.querySelector(".wrap_ani2").classList.add("show");
+                document.querySelector(".wrap_ani3").classList.add("show");
+                document.querySelector(".wrap_ani4").classList.add("show");
+
+            }
+        });
+
+
+        //content영역 애니메이션
+        window.addEventListener("scroll", ()=>{
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+            if(pageYOffset > document.getElementById("contents").offsetTop * 0.6){
+                document.querySelector(".left").classList.add("show");
+                document.querySelector(".right").classList.add("show");
+                document.querySelectorAll(".right ul li").forEach((elem, index)=>{
+                    setTimeout(()=>{
+                        elem.classList.add("show");
+                    }, 700 * (index + 1));
+                });
+            }
+        });
     </script>
 </body>
 </html>

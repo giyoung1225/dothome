@@ -75,6 +75,11 @@ body::-webkit-scrollbar-thumb {
 .icon {
     width: 60px;
     height: 40px;
+    transform: translateY(-100px);
+    transition: transform 1.5s 1.5s ease-in-out;
+}
+.icon.show {
+    transform: translateY(0);
 }
 .icon a {
     display: flex;
@@ -166,6 +171,11 @@ body::-webkit-scrollbar-thumb {
     font-size: 20px;
     margin-top: 5px;
     font-weight: 700;
+    transform: translateY(-100px);
+    transition: transform 1.5s 2s ease-in-out;
+}
+.menu.show {
+    transform: translateY(0);
 }
 .menu ul {
     display: flex;
@@ -228,7 +238,11 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     background: #fff;
     position: relative;
-    transition: transform .4s cubic-bezier(.215,.61,.355,1);
+    transition: transform 1.5s 1.5s ease-in-out;
+    transform: translateY(-100px);
+}
+.topBtn.show {
+    transform: translateY(0);
 }
 .btnShape {
     position: relative;
@@ -274,6 +288,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 .wordBox .split span {
     font-weight: 900;
@@ -287,7 +302,83 @@ body::-webkit-scrollbar-thumb {
 .wordBox .split4 span {
     font-weight: 300;
 }
+.wordBox .split span:nth-child(2) {
+    opacity: 1;
+    transition: opacity .2s .8s ease-in-out;
+}
+.wordBox .split span:nth-child(2).show {
+    opacity: 0;
+}
+.wordBox .split2 span:nth-child(2) {
+    opacity: 1;
+    transition: opacity .2s .8s ease-in-out;
+}
+.wordBox .split2 span:nth-child(2).show {
+    opacity: 0;
+}
+.wordBox .split3 span:nth-child(2) {
+    opacity: 1;
+    transition: opacity .2s .8s ease-in-out;
+}
+.wordBox .split3 span:nth-child(2).show {
+    opacity: 0;
+}
+.wordBox .split4 span:nth-child(2) {
+    opacity: 1;
+    transition: opacity .2s .8s ease-in-out;
+}
+.wordBox .split4 span:nth-child(2).show {
+    opacity: 0;
+}
 
+
+
+.mask {
+    display: inline-block;
+    z-index: 1;
+    width: 100%;
+    height: 16%;
+    box-sizing: content-box;
+    position: absolute;
+    background: #fff;
+    transform: translate(0, 0);
+    transition: transform 1s ease-in-out;
+}
+.mask::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 100%; width: 40px;
+    background-color: #000;
+    
+}
+
+.txtMask1 {
+    top: 300px;
+}
+.txtMask2 {
+    top: 620px;
+}
+.txtMask3 {
+    top: 940px;
+}
+.txtMask4 {
+    top: 1260px;
+}
+.txtMask1.show {
+    transform: translate(103%, 0);
+}
+.txtMask2.show {
+    transform: translate(103%, 0);
+}
+.txtMask3.show {
+    transform: translate(103%, 0);
+}
+.txtMask4.show {
+    transform: translate(103%, 0);
+}
 
 /* about_obj */
 .about {position: relative;}
@@ -361,8 +452,44 @@ body::-webkit-scrollbar-thumb {
 .shap {
     width: 130%; height: 100%;
     position: relative;
+  
 }
-
+.wrap_ani1 {
+    transform: translateY(200px);
+    transition: all 1.5s 1s ease-in-out;
+    opacity: 0;
+}
+.wrap_ani1.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.wrap_ani2 {
+    transform: translateY(200px);
+    transition: all 1.5s 1.2s ease-in-out;
+    opacity: 0;
+}
+.wrap_ani2.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.wrap_ani3 {
+    transform: translateY(200px);
+    transition: all 1.5s 1.4s ease-in-out;
+    opacity: 0;
+}
+.wrap_ani3.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.wrap_ani4 {
+    transform: translateY(200px);
+    transition: all 1.5s 1.6s ease-in-out;
+    opacity: 0;
+}
+.wrap_ani4.show {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 .shap1_1 {
     background: red;
@@ -583,11 +710,23 @@ body::-webkit-scrollbar-thumb {
 .content .left .title {
     font-size: 28px;
     font-weight: 700;
+    transition: opacity 1s 0.2s ease-in-out;
+    opacity: 0;
+}
+.content .left.show .title {
+    opacity: 1;
 }
 .content .left .desc p {
     margin-top: 70px;
     font-size: 28px;
     font-weight: 100;
+    transition: all 1.5s .5s ease-in-out;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.content .left.show .desc p {
+    transform: translateY(0);
+    opacity: 1;
 }
 .content .right {
     flex: 0 0 10%;
@@ -598,6 +737,11 @@ body::-webkit-scrollbar-thumb {
 .content .right .title {
     font-size: 31px;
     font-weight: 700;
+    transition: opacity 1s 0.2s ease-in-out;
+    opacity: 0;
+}
+.content .right.show .title {
+    opacity: 1;
 }
 .content .right ul {
     font-size: 31px;
@@ -605,6 +749,13 @@ body::-webkit-scrollbar-thumb {
 }
 .content .right ul li {
     margin-top: 20px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1.5s .5s ease-in-out;
+}
+.content .right ul li.show {
+    transform: translateX(0);
+    opacity: 1;
 }
 .content .right ul li a {
     position: relative;
