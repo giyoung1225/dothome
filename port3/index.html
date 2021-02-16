@@ -91,7 +91,7 @@
                 imgCurrent = 0,
                 progressTimer = setInterval(updateProgress, 1000/60);
 
-            imgLoad.on('progress', function () {
+            imgLoad.on('porogress', function () {
                 imgLoaded++;
             });
 
@@ -103,7 +103,7 @@
                     clearInterval(progressTimer);
 
                     $("body").addClass("active");
-                    gsap.to($progress, {
+                    gsap.to($loading, {
                         duration: 1, 
                         left: "-110%",
                         ease: "power4.out"
