@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>port</title>
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div id="loading">
+        <span class="l_box lb1"></span>
+        <span class="l_box lb2"></span>
+        <span class="l_box lb3"></span>
+        <span class="l_box lb4"></span>
+        <span class="l_box lb5"></span>
+    </div>
+    <!-- //loading -->
+
+
+    <div id="wrap">
+        <header id="header">
+            <div class="header">
+                <div class="h_left"><a href="#">Portfolio</a></div>
+                <div class="h_center"><a href="#">hong</a></div>
+                <div class="h_right">
+                    <div class="right_box1"><a href="#" class="ir_so">menu</a></div>
+                    <div class="right_box2"><a href="#" class="ir_so">menu</a></div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main>
+            <section id="mainCont">
+                <div class="mainText">
+                    <div class="split1 text">WE PROVIDE</div>
+                    <div class="split2 text">VISUAL CODING</div>
+                    <div class="split3 text">SOLUTIONS</div>
+                    <div class="split4 text">FOR YOU WEBS</div>
+                </div>
+            </section>
+        </main>
+        <!-- //main -->
+        <footer>
+            <div class="f_left">
+                <ul>
+                    <li>email</li>
+                    <li><a href="#">ty123486@naver.com</a></li>
+                </ul>
+            </div>
+            <div class="f_center">
+                <ul>
+                    <li>kakao</li>
+                    <li><a href="#">hgy5710</a></li>
+                </ul>
+            </div>
+            <div class="f_right">
+                <ul>
+                    <li>social</li>
+                    <li><a href="#">instagram</a></li>
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">github</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- footer -->
+    </div>
+    
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://flairgale.cafe24.com/para/js/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+        // loading
+        function loading() {
+            let $loading = $("#loading");
+
+            let imgLoad = imagesLoaded("body"),
+                imgTotal = imgLoad.images.length,
+                imgLoaded = 0,
+                imgCurrent = 0,
+                progressTimer = setInterval(updateProgress, 1000/60);
+
+            imgLoad.on('progress', function () {
+                imgLoaded++;
+            });
+
+            function updateProgress(){
+                let target = ( imgLoaded/imgTotal ) * 100;
+                imgCurrent += (target - imgCurrent) * 0.1;
+
+                if( imgCurrent >= 100 ){
+                    clearInterval(progressTimer);
+
+                    $("body").addClass("active");
+                    gsap.to($progress, {
+                        duration: 1, 
+                        left: "-110%",
+                        ease: "power4.out"
+                    });
+
+                }
+
+                if( imgCurrent > 99 ){
+                    imgCurrent = 100;
+                }
+            }
+        }
+        
+        loading();
+
+        //skrollr 
+         var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+
+
+        //header 글씨 쪼개기
+        let text1 = document.querySelector(".split1"),
+            splitText1 = text1.innerText;
+            splitWrap1 = splitText1.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap1 = "<span aria-hidden: 'true'>" + splitWrap1 + "</span>";
+        
+            text1.innerHTML = splitWrap1;
+        
+        text1.setAttribute("aria-label", splitText1);
+
+        let text2 = document.querySelector(".split2"),
+            splitText2 = text2.innerText;
+            splitWrap2 = splitText2.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap2 = "<span aria-hidden: 'true'>" + splitWrap2 + "</span>";
+        
+            text2.innerHTML = splitWrap2;
+        
+        text2.setAttribute("aria-label", splitText2);
+
+        let text3 = document.querySelector(".split3"),
+            splitText3 = text3.innerText;
+            splitWrap3 = splitText3.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap3 = "<span aria-hidden: 'true'>" + splitWrap3 + "</span>";
+        
+            text3.innerHTML = splitWrap3;
+        
+        text3.setAttribute("aria-label", splitText3);
+
+        let text4 = document.querySelector(".split4"),
+            splitText4 = text4.innerText;
+            splitWrap4 = splitText4.split("").join("</span><span aria-hidden: 'true'>");
+            splitWrap4 = "<span aria-hidden: 'true'>" + splitWrap4 + "</span>";
+        
+            text4.innerHTML = splitWrap4;
+        
+        text4.setAttribute("aria-label", splitText4);
+
+        //한글자씩 나오게 하기
+        window.addEventListener("scroll", () => {
+            document.querySelector("#mainCont .mainText").elem.classList.add("show");
+        });
+
+
+        
+        
+        
+    </script>
+</body>
+</html>
