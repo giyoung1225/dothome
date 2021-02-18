@@ -72,6 +72,7 @@
 }
 #wrap {
     height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -115,16 +116,25 @@ body.active {
 
 
 
-
 /* 헤더영역 */
 #header {
+    border-bottom: 1px solid #777;
+    height: 80px;
+    transform: translateY(-100px);
 }
 .header {
     display: flex;
     justify-content: space-between;
     margin: 0 50px 0 50px;
-    padding-top: 30px;
+    padding-top: 20px;
+    position: relative;
 }
+/* .header::before {
+    content: "";
+    left: 0; top: 0;
+    width: 100%; height: 1px;
+    position: absolute;
+} */
 
 .h_left {
     margin-left: 0px;
@@ -197,8 +207,8 @@ body.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
-    margin-bottom: 180px;
+    margin-top: 140px;
+    margin-bottom: 170px;
     height: 50vh;
 }
 .mainText {
@@ -217,10 +227,11 @@ body.active {
 .mainText .text {
 }
 .mainText .text span {
-    transform: translate(0, 0);
+    transform: translate(0, 50px);
+    opacity: 0;
     display: inline-block;
-    transition: all 0.77s cubic-bezier(0.67,-0.38, 0, 1.09);
-    animation: text 0.77s ease;
+    transition: all 1s cubic-bezier(0.67,-0.38, 0, 1.09);
+    animation: text 1s ease;
 }
 
 /* .mainText .text.show {
@@ -230,34 +241,80 @@ body.active {
 
 .mainText.show .text span {
     transform: translate(0, 0);
+    opacity: 1;
 }
 
-.mainText .text span:nth-child(1) {transition-delay: 0.05s;}
-.mainText .text span:nth-child(2) {transition-delay: 0.10s;}
-.mainText .text span:nth-child(3) {transition-delay: 0.15s;}
-.mainText .text span:nth-child(4) {transition-delay: 0.20s;}
-.mainText .text span:nth-child(5) {transition-delay: 0.25s;}
-.mainText .text span:nth-child(6) {transition-delay: 0.30s;}
-.mainText .text span:nth-child(7) {transition-delay: 0.35s;}
-.mainText .text span:nth-child(8) {transition-delay: 0.40s;}
-.mainText .text span:nth-child(9) {transition-delay: 0.45s;}
-.mainText .text span:nth-child(10) {transition-delay: 0.50s;}
-.mainText .text span:nth-child(11) {transition-delay: 0.55s;}
-.mainText .text span:nth-child(12) {transition-delay: 0.60s;}
-.mainText .text span:nth-child(13) {transition-delay: 0.65s;}
+.mainText .split1 span:nth-child(1) {transition-delay: 0.05s;}
+.mainText .split1 span:nth-child(2) {transition-delay: 0.10s;}
+.mainText .split1 span:nth-child(3) {transition-delay: 0.15s;}
+.mainText .split1 span:nth-child(4) {transition-delay: 0.20s;}
+.mainText .split1 span:nth-child(5) {transition-delay: 0.25s;}
+.mainText .split1 span:nth-child(6) {transition-delay: 0.30s;}
+.mainText .split1 span:nth-child(7) {transition-delay: 0.35s;}
+.mainText .split1 span:nth-child(8) {transition-delay: 0.40s;}
+.mainText .split1 span:nth-child(9) {transition-delay: 0.45s;}
+.mainText .split1 span:nth-child(10) {transition-delay: 0.50s;}
+.mainText .split1 span:nth-child(11) {transition-delay: 0.55s;}
+.mainText .split1 span:nth-child(12) {transition-delay: 0.60s;}
+.mainText .split1 span:nth-child(13) {transition-delay: 0.65s;}
 
+.mainText .split2 span:nth-child(1) {transition-delay: 0.75s;}
+.mainText .split2 span:nth-child(2) {transition-delay: 0.80s;}
+.mainText .split2 span:nth-child(3) {transition-delay: 0.95s;}
+.mainText .split2 span:nth-child(4) {transition-delay: 1s;}
+.mainText .split2 span:nth-child(5) {transition-delay: 1.05s;}
+.mainText .split2 span:nth-child(6) {transition-delay: 1.10s;}
+.mainText .split2 span:nth-child(7) {transition-delay: 1.15s;}
+.mainText .split2 span:nth-child(8) {transition-delay: 1.20s;}
+.mainText .split2 span:nth-child(9) {transition-delay: 1.25s;}
+.mainText .split2 span:nth-child(10) {transition-delay: 1.30s;}
+.mainText .split2 span:nth-child(11) {transition-delay: 1.35s;}
+.mainText .split2 span:nth-child(12) {transition-delay: 1.40s;}
+.mainText .split2 span:nth-child(13) {transition-delay: 1.45s;}
+
+.mainText .split3 span:nth-child(1) {transition-delay: 1.50s;}
+.mainText .split3 span:nth-child(2) {transition-delay: 1.55s;}
+.mainText .split3 span:nth-child(3) {transition-delay: 1.60s;}
+.mainText .split3 span:nth-child(4) {transition-delay: 1.65s;}
+.mainText .split3 span:nth-child(5) {transition-delay: 1.70s;}
+.mainText .split3 span:nth-child(6) {transition-delay: 1.75s;}
+.mainText .split3 span:nth-child(7) {transition-delay: 1.80s;}
+.mainText .split3 span:nth-child(8) {transition-delay: 1.85s;}
+.mainText .split3 span:nth-child(9) {transition-delay: 1.90s;}
+.mainText .split3 span:nth-child(10) {transition-delay: 1.95s;}
+.mainText .split3 span:nth-child(11) {transition-delay: 2s;}
+.mainText .split3 span:nth-child(12) {transition-delay: 2.05s;}
+.mainText .split3 span:nth-child(13) {transition-delay: 2.10s;}
+
+.mainText .split4 span:nth-child(1) {transition-delay: 2.15s;}
+.mainText .split4 span:nth-child(2) {transition-delay: 2.20s;}
+.mainText .split4 span:nth-child(3) {transition-delay: 2.25s;}
+.mainText .split4 span:nth-child(4) {transition-delay: 2.30s;}
+.mainText .split4 span:nth-child(5) {transition-delay: 2.35s;}
+.mainText .split4 span:nth-child(6) {transition-delay: 2.40s;}
+.mainText .split4 span:nth-child(7) {transition-delay: 2.55s;}
+.mainText .split4 span:nth-child(8) {transition-delay: 2.60s;}
+.mainText .split4 span:nth-child(9) {transition-delay: 2.65s;}
+.mainText .split4 span:nth-child(10) {transition-delay: 2.70s;}
+.mainText .split4 span:nth-child(11) {transition-delay: 2.75s;}
+.mainText .split4 span:nth-child(12) {transition-delay: 2.80s;}
+.mainText .split4 span:nth-child(13) {transition-delay: 2.85s;}
 
 /* footer */
 footer {
     display: flex;
     justify-content: space-between;
-    margin: 50px 50px 0 50px;
+    padding: 5px 50px 0 50px;
     font-size: 18px;
     font-family: 'S-CoreDream';
     font-weight: 100;
+    border-top: 1px solid #777;
+    transform: translateY(100px);
 }
 .f_left {
     flex: 0 0 40%;
+    border-right: 1px solid #777;
+
 }
 .f_left ul {
     display: flex;
@@ -269,8 +326,10 @@ footer {
     color: #888;
 }
 
+
 .f_center {
     flex: 0 0 20%;
+    border-right: 1px solid #777;
 }
 .f_center ul {
     display: flex;
@@ -281,6 +340,7 @@ footer {
 .f_center ul li:nth-child(1) {
     color: #888;
 }
+
 
 .f_right {
     flex: 0 0 40%;
@@ -296,6 +356,12 @@ footer {
     color: #888;
 }
 
+.img {
+    width: 100%;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: -99999;
+}
 
 
 

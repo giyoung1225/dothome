@@ -221,11 +221,13 @@
         });
         sliderDot.html(dotIndex);
         sliderDot.find("a").eq(0).addClass("active");
+        
         // 닷 버튼 클릭하기
         sliderDot.on("click","a", function(e){
             e.preventDefault();
             gotoSlider($(this).index());
         });
+
         // 버튼 클릭하기
         sliderBtn.on("click","a", function(e){
             e.preventDefault();

@@ -13,6 +13,7 @@
 
 <body>
 
+
     <div id="loading">
         <span class="l_box lb1"></span>
         <span class="l_box lb2"></span>
@@ -20,6 +21,7 @@
         <span class="l_box lb4"></span>
         <span class="l_box lb5"></span>
     </div>
+
     <!-- //loading -->
 
 
@@ -29,8 +31,8 @@
                 <div class="h_left"><a href="#">Portfolio</a></div>
                 <div class="h_center"><a href="#">hong</a></div>
                 <div class="h_right">
-                    <div class="right_box1"><a href="#" class="ir_so">menu</a></div>
-                    <div class="right_box2"><a href="#" class="ir_so">menu</a></div>
+                    <div class="right_box1"><a href="#" class="sr-only">menu</a></div>
+                    <div class="right_box2"><a href="#" class="sr-only">menu</a></div>
                 </div>
             </div>
         </header>
@@ -70,6 +72,12 @@
             </div>
         </footer>
         <!-- footer -->
+
+
+        <img src="http://hgy5710.dothome.co.kr/effect/img/images03@2.jpg" alt="d" class="img">
+
+    
+
     </div>
     
 
@@ -81,43 +89,6 @@
     <script src="http://flairgale.cafe24.com/para/js/imagesloaded.pkgd.min.js"></script>
 
     <script>
-        // loading
-        function loading() {
-            let $loading = $("#loading");
-
-            let imgLoad = imagesLoaded("body"),
-                imgTotal = imgLoad.images.length,
-                imgLoaded = 0,
-                imgCurrent = 0,
-                progressTimer = setInterval(updateProgress, 1000/60);
-
-            imgLoad.on('porogress', function () {
-                imgLoaded++;
-            });
-
-            function updateProgress(){
-                let target = ( imgLoaded/imgTotal ) * 100;
-                imgCurrent += (target - imgCurrent) * 0.1;
-
-                if( imgCurrent >= 100 ){
-                    clearInterval(progressTimer);
-
-                    $("body").addClass("active");
-                    gsap.to($loading, {
-                        duration: 1, 
-                        left: "-110%",
-                        ease: "power4.out"
-                    });
-
-                }
-
-                if( imgCurrent > 99 ){
-                    imgCurrent = 100;
-                }
-            }
-        }
-        
-        loading();
 
         //skrollr 
          var s = skrollr.init({
@@ -169,7 +140,320 @@
         });
 
 
+        // loading
+        // function loading() {
+        //     let $progress = $("#loading");
+
+        //     let imgLoad = imagesLoaded("body"),
+        //         imgTotal = imgLoad.images.length,
+        //         imgLoaded = 0,
+        //         imgCurrent = 0,
+        //         progressTimer = setInterval(updateProgress, 100000/60);
+
+        //     imgLoad.on("progress", function () {
+        //         imgLoaded++;
+        //     });
+
+        //     function updateProgress(){
+        //         let target = ( imgLoaded/imgTotal ) * 100;
+        //         imgCurrent += (target - imgCurrent) * 0.1;
+
+        //         if( imgCurrent >= 100 ){
+        //             clearInterval(progressTimer);
+        //             $("body").addClass("active");
+        //             gsap.to($progress, {
+        //                 duration: 1, 
+        //                 left: "-110%",
+        //                 ease: "power4.out"
+        //             });
+        //             //메인 애니메이션
+        //             let tl = gasp.timeline();
+        //         }
+
+        //         if( imgCurrent > 99 ){
+        //             imgCurrent = 100;
+        //         }
+        //     }
+        // }
         
+        // loading();
+
+        function loading(){
+            let $loading = $('#loading');
+
+            let imgLoad = imagesLoaded("body"),
+                imgTotal = imgLoad.images.length,
+                imgLoaded = 0,
+                imgCurrent = 0,
+                progressTimer = setInterval(updateProgress, 1000/60);
+
+            imgLoad.on('progress', function(){
+                imgLoaded++;
+            });
+
+            function updateProgress(){
+                let target = (imgLoaded/imgTotal) * 100;
+                imgCurrent += (target - imgCurrent) * 0.1;
+
+                if(imgCurrent >= 100){
+                    clearInterval(progressTimer);
+
+                    $("body").addClass("active");
+                    gsap.to($("#loading .lb1"), {
+                        duration: 1.5, 
+                        left: '-110%',
+                        ease: "power2.out"
+                    })
+                    gsap.to($("#loading .lb2"), {
+                        duration: 1.5, 
+                        left: '-110%',
+                        ease: "power2.out",
+                        delay: '.2'
+                    })
+                    gsap.to($("#loading .lb3"), {
+                        duration: 1.5, 
+                        left: '-110%',
+                        ease: "power2.out",
+                        delay: '.4'
+                    })
+                    gsap.to($("#loading .lb4"), {
+                        duration: 1.5, 
+                        left: '-110%',
+                        ease: "power2.out",
+                        delay: '.6'
+                    })
+                    gsap.to($("#loading .lb5"), {
+                        duration: 1.5, 
+                        left: '-110%',
+                        ease: "power2.out",
+                        delay: '.8'
+                    })
+                    gsap.to($loading, {
+                        duration: 1.5, 
+                        display: 'none'
+                    })
+
+                    gsap.to($(".mainText .split1 span:nth-child(1)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(2)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.1'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(4)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.2'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(5)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.3'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(6)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.4'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(7)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.5'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(8)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.6'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(9)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.7'
+                    })
+                    gsap.to($(".mainText .split1 span:nth-child(10)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.8'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(1)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '1.9'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(2)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.0'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(3)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.1'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(4)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.2'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(5)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.3'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(6)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.4'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(8)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.5'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(9)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.6'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(10)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.7'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(11)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.8'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(12)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '2.9'
+                    })
+                    gsap.to($(".mainText .split2 span:nth-child(13)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.0'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(1)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.1'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(2)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.2'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(3)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.3'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(4)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.4'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(5)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.5'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(6)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.6'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(7)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.7'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(8)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.8'
+                    })
+                    gsap.to($(".mainText .split3 span:nth-child(9)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '3.9'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(1)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.0'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(2)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.1'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(3)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.2'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(5)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.3'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(6)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.4'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(7)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.5'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(9)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.6'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(10)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.7'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(11)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.8'
+                    })
+                    gsap.to($(".mainText .split4 span:nth-child(12)"), { 
+                        translateY : '0',
+                        opacity : '1',
+                        delay: '4.9'
+                    })
+
+                    gsap.to($("#header"), { 
+                        translateY : '0',
+                        delay: '9'
+                    })
+                    gsap.to($("footer"), { 
+                        translateY : '0',
+                        delay: '9'
+                    })
+
+                }
+                
+
+                if(imgCurrent > 99){
+                    imgCurrent = 100;
+                }
+
+            }
+        }
+        loading();
+
         
         
     </script>
