@@ -31,12 +31,24 @@
                 <div class="h_left"><a href="#">Portfolio</a></div>
                 <div class="h_center"><a href="#">hong</a></div>
                 <div class="h_right">
-                    <div class="right_box1"><a href="#" class="sr-only">menu</a></div>
-                    <div class="right_box2"><a href="#" class="sr-only">menu</a></div>
+                    <a href="#">
+                        <span class="right_box1 sr-only">menu</span>
+                    </a>
                 </div>
             </div>
         </header>
         <!-- //header -->
+
+        <div class="header_menu">
+            <ul>
+                <li><a href="/port3/about.html">about</a></li>
+                <li><a href="#">site</a></li>
+                <li><a href="#">script</a></li>
+                <li><a href="#">animation</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <!-- //header_menu -->
 
         <main>
             <section id="mainCont">
@@ -49,6 +61,8 @@
             </section>
         </main>
         <!-- //main -->
+
+
         <footer>
             <div class="f_left">
                 <ul>
@@ -134,10 +148,6 @@
         
         text4.setAttribute("aria-label", splitText4);
 
-        //한글자씩 나오게 하기
-        window.addEventListener("scroll", () => {
-            document.querySelector("#mainCont .mainText").elem.classList.add("show");
-        });
 
 
         // loading
@@ -436,11 +446,11 @@
 
                     gsap.to($("#header"), { 
                         translateY : '0',
-                        delay: '9'
+                        delay: '6.3'
                     })
                     gsap.to($("footer"), { 
                         translateY : '0',
-                        delay: '9'
+                        delay: '6.3'
                     })
 
                 }
@@ -454,7 +464,14 @@
         }
         loading();
 
-        
+        function menuOn(){
+            $(".h_right").click(function(){
+                $(".h_right").toggleClass("click");
+                $(".header_menu").toggleClass("click");
+    
+            });
+        }
+        menuOn();
         
     </script>
 </body>

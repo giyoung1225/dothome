@@ -122,11 +122,12 @@ body.active {
     height: 80px;
     transform: translateY(-100px);
 }
+
 .header {
     display: flex;
     justify-content: space-between;
     margin: 0 50px 0 50px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     position: relative;
 }
 /* .header::before {
@@ -140,6 +141,7 @@ body.active {
     margin-left: 0px;
     font-size: 20px;
     position: relative;
+    margin-top: 25px;
 }
 .h_left::before {
     content: "";
@@ -161,40 +163,54 @@ body.active {
 .h_center {
     font-family: "Saol Display Regular";
     font-size: 35px;
+    margin-top: 15px;
 }
 
 .h_right {
     margin-right: 0px;
-}
-.right_box1 {
-    width: 8px; height: 8px;
-    background: #fff;
-    border-radius: 1px;
-    margin-bottom: 5px;
+    margin-top: 30px;
+    width: 40px; height: 40px;
     position: relative;
+    right: 0;
+    transition: all 1s ease-in-out;
 }
-.right_box1::before {
+.h_right.click {
+    right: 130px;
+}
+.h_right a::before {
     content: "";
-    top: 0; left: 13px;
-    width: 8px; height: 8px;
-    background: #fff;
     position: absolute;
-    border-radius: 1px;
-}
-.right_box2 {
+    left: 20px; top: 0;
     width: 8px; height: 8px;
     background: #fff;
-    border-radius: 1px;
-    position: relative;
+    box-shadow: 0 12px 0 #fff;
 }
-.right_box2::before {
+.h_right a::after {
     content: "";
-    top: 0; left: 13px;
+    position: absolute;
+    right: 0; top: 0;
     width: 8px; height: 8px;
     background: #fff;
-    position: absolute;
-    border-radius: 1px;
+    box-shadow: 0 12px 0 #fff;
 }
+
+/* 헤더메뉴 */
+.header_menu {
+    position: fixed;
+    right: -500px; top: 85px;
+    width: 200px; height: 85vh;
+    font-size: 40px;
+    transition: all 0.8s ease-in-out;
+}
+.header_menu.click {
+    right: 0;
+}
+.header_menu ul {
+}
+.header_menu ul li {
+}
+
+
 
 /* container */
 .container {
@@ -207,9 +223,7 @@ body.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 140px;
-    margin-bottom: 170px;
-    height: 50vh;
+    height: 85vh;
 }
 .mainText {
     font-family: "Saol Display Regular";
@@ -244,67 +258,23 @@ body.active {
     opacity: 1;
 }
 
-.mainText .split1 span:nth-child(1) {transition-delay: 0.05s;}
-.mainText .split1 span:nth-child(2) {transition-delay: 0.10s;}
-.mainText .split1 span:nth-child(3) {transition-delay: 0.15s;}
-.mainText .split1 span:nth-child(4) {transition-delay: 0.20s;}
-.mainText .split1 span:nth-child(5) {transition-delay: 0.25s;}
-.mainText .split1 span:nth-child(6) {transition-delay: 0.30s;}
-.mainText .split1 span:nth-child(7) {transition-delay: 0.35s;}
-.mainText .split1 span:nth-child(8) {transition-delay: 0.40s;}
-.mainText .split1 span:nth-child(9) {transition-delay: 0.45s;}
-.mainText .split1 span:nth-child(10) {transition-delay: 0.50s;}
-.mainText .split1 span:nth-child(11) {transition-delay: 0.55s;}
-.mainText .split1 span:nth-child(12) {transition-delay: 0.60s;}
-.mainText .split1 span:nth-child(13) {transition-delay: 0.65s;}
 
-.mainText .split2 span:nth-child(1) {transition-delay: 0.75s;}
-.mainText .split2 span:nth-child(2) {transition-delay: 0.80s;}
-.mainText .split2 span:nth-child(3) {transition-delay: 0.95s;}
-.mainText .split2 span:nth-child(4) {transition-delay: 1s;}
-.mainText .split2 span:nth-child(5) {transition-delay: 1.05s;}
-.mainText .split2 span:nth-child(6) {transition-delay: 1.10s;}
-.mainText .split2 span:nth-child(7) {transition-delay: 1.15s;}
-.mainText .split2 span:nth-child(8) {transition-delay: 1.20s;}
-.mainText .split2 span:nth-child(9) {transition-delay: 1.25s;}
-.mainText .split2 span:nth-child(10) {transition-delay: 1.30s;}
-.mainText .split2 span:nth-child(11) {transition-delay: 1.35s;}
-.mainText .split2 span:nth-child(12) {transition-delay: 1.40s;}
-.mainText .split2 span:nth-child(13) {transition-delay: 1.45s;}
+.mainText .split1 span:nth-child(3) {width: 30px;}
 
-.mainText .split3 span:nth-child(1) {transition-delay: 1.50s;}
-.mainText .split3 span:nth-child(2) {transition-delay: 1.55s;}
-.mainText .split3 span:nth-child(3) {transition-delay: 1.60s;}
-.mainText .split3 span:nth-child(4) {transition-delay: 1.65s;}
-.mainText .split3 span:nth-child(5) {transition-delay: 1.70s;}
-.mainText .split3 span:nth-child(6) {transition-delay: 1.75s;}
-.mainText .split3 span:nth-child(7) {transition-delay: 1.80s;}
-.mainText .split3 span:nth-child(8) {transition-delay: 1.85s;}
-.mainText .split3 span:nth-child(9) {transition-delay: 1.90s;}
-.mainText .split3 span:nth-child(10) {transition-delay: 1.95s;}
-.mainText .split3 span:nth-child(11) {transition-delay: 2s;}
-.mainText .split3 span:nth-child(12) {transition-delay: 2.05s;}
-.mainText .split3 span:nth-child(13) {transition-delay: 2.10s;}
 
-.mainText .split4 span:nth-child(1) {transition-delay: 2.15s;}
-.mainText .split4 span:nth-child(2) {transition-delay: 2.20s;}
-.mainText .split4 span:nth-child(3) {transition-delay: 2.25s;}
-.mainText .split4 span:nth-child(4) {transition-delay: 2.30s;}
-.mainText .split4 span:nth-child(5) {transition-delay: 2.35s;}
-.mainText .split4 span:nth-child(6) {transition-delay: 2.40s;}
-.mainText .split4 span:nth-child(7) {transition-delay: 2.55s;}
-.mainText .split4 span:nth-child(8) {transition-delay: 2.60s;}
-.mainText .split4 span:nth-child(9) {transition-delay: 2.65s;}
-.mainText .split4 span:nth-child(10) {transition-delay: 2.70s;}
-.mainText .split4 span:nth-child(11) {transition-delay: 2.75s;}
-.mainText .split4 span:nth-child(12) {transition-delay: 2.80s;}
-.mainText .split4 span:nth-child(13) {transition-delay: 2.85s;}
+
+.mainText .split2 span:nth-child(7) {width: 30px;}
+
+
+.mainText .split4 span:nth-child(4) {width: 30px;}
+.mainText .split4 span:nth-child(8) {width: 30px;}
+
 
 /* footer */
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 5px 50px 0 50px;
+    padding: 0px 50px 0 50px;
     font-size: 18px;
     font-family: 'S-CoreDream';
     font-weight: 100;
@@ -364,8 +334,127 @@ footer {
 }
 
 
+/* about */
+#header_about {
+    border-bottom: 1px solid #777;
+    height: 80px;
+    transform: translateY(-100px);
+}
 
-/* 미디어쿼리 */
-@media (max-width: 1024px){
 
+#about {
+    color: #fff;
+}
+.about .title {
+    margin: 200px 0;
+}
+.about h1 {
+    font-family: "Saol Display Regular";
+    font-weight: 100;
+    font-size: 180px;
+    line-height: 0.9;
+}
+.about h1 span {
+    background: none;
+}
+
+.title h1 span {
+    transform: translate(0, 50px);
+    opacity: 0;
+    display: inline-block;
+    transition: all 1s cubic-bezier(0.67,-0.38, 0, 1.09);
+    animation: text 1s ease;
+}
+
+
+.cont1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 500px;
+}
+
+.cont1 .cont_left img {
+    width: 100%;
+    margin-bottom: 50px;
+    opacity: 0;
+}
+.cont1.active .cont_left img {
+    opacity: 1;
+}
+.cont1 .cont_right {
+    width: 60%;
+}
+.cont1 .cont_right h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.cont1 .cont_right p {
+    font-size: 18px;
+}
+
+.cont2 {
+    display: flex;
+    margin-bottom: 500px;
+}
+.cont2 .cont_left {
+    flex: 0 0 60%;
+}
+
+.cont2 .cont_right {
+    flex: 0 0 40%;
+}
+
+.cont2 .cont_right h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.cont2 .cont_right p {
+    font-size: 18px;
+}
+
+.cont3 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 500px;
+}
+.cont3 .cont_left {
+    flex: 0 0 60%;
+    margin-left: 30px;
+}
+.cont3 .cont_left img {
+    width: 100%;
+}
+.cont3 .cont_right {
+    flex: 0 0 40%;
+}
+
+.cont3 .cont_right h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.cont3 .cont_right p {
+    font-size: 18px;
+}
+
+
+.cont4 .cont_left img {
+    width: 100%;
+    margin-bottom: 50px;
+} 
+
+.cont4 .cont_right {
+
+}
+.cont4 .cont_right h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.cont4 .cont_right p {
+    font-size: 18px;
+}
+
+
+#about_footer {
+    height: 100vh;
+    border: none;
 }

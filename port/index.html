@@ -577,7 +577,7 @@
                 imgTotal = imgLoad.images.length,
                 imgLoaded = 0,
                 imgCurrent = 0,
-                progressTimer = setInterval(updateProgress, 100000/60);
+                progressTimer = setInterval(updateProgress, 10000/60);
 
             imgLoad.on("progress", function () {
                 imgLoaded++;
